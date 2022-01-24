@@ -49,10 +49,13 @@ var BasePoint;
     BasePoint[BasePoint["BottomLeft"] = 2] = "BottomLeft";
     BasePoint[BasePoint["Left"] = 3] = "Left";
 })(BasePoint = exports.BasePoint || (exports.BasePoint = {}));
-exports.round = (value, roundValue = 1) => Math.round(Math.round(value / roundValue) * roundValue);
+function round(number, digits = 3) {
+    return Math.round(number * Math.pow(10, digits)) / Math.pow(10, digits);
+}
+exports.round = round;
 exports.roundPoint = (point, roundValue) => !roundValue || roundValue == 0
     ? point
-    : new Point(Math.round(exports.round(point.x, roundValue)), Math.round(exports.round(point.y, roundValue)));
+    : new Point(Math.round(round(point.x, roundValue)), Math.round(round(point.y, roundValue)));
 function scalePoint(p, dx, dy, rect, basePoint) {
     let point;
     if (basePoint == BasePoint.Left || basePoint == BasePoint.Right)
@@ -60,16 +63,16 @@ function scalePoint(p, dx, dy, rect, basePoint) {
     else if (basePoint == BasePoint.Top || basePoint == BasePoint.Bottom)
         dx = 0;
     if (basePoint == BasePoint.TopLeft || basePoint == BasePoint.Left || basePoint == BasePoint.Top) {
-        point = new Point(exports.round(p.x + ((p.x - rect.x) / rect.width) * dx), exports.round(p.y + ((p.y - rect.y) / rect.height) * dy));
+        point = new Point(round(p.x + ((p.x - rect.x) / rect.width) * dx), round(p.y + ((p.y - rect.y) / rect.height) * dy));
     }
     else if (basePoint == BasePoint.TopRight || basePoint == BasePoint.Right) {
-        point = new Point(exports.round(p.x - ((rect.x + rect.width - p.x) / rect.width) * -1 * dx), exports.round(p.y + ((p.y - rect.y) / rect.height) * dy));
+        point = new Point(round(p.x - ((rect.x + rect.width - p.x) / rect.width) * -1 * dx), round(p.y + ((p.y - rect.y) / rect.height) * dy));
     }
     else if (basePoint == BasePoint.BottomRight) {
-        point = new Point(exports.round(p.x - ((rect.x + rect.width - p.x) / rect.width) * -1 * dx), exports.round(p.y - ((rect.y + rect.height - p.y) / rect.height) * -1 * dy));
+        point = new Point(round(p.x - ((rect.x + rect.width - p.x) / rect.width) * -1 * dx), round(p.y - ((rect.y + rect.height - p.y) / rect.height) * -1 * dy));
     }
     else if (basePoint == BasePoint.BottomLeft || basePoint == BasePoint.Bottom) {
-        point = new Point(exports.round(p.x + ((p.x - rect.x) / rect.width) * dx), exports.round(p.y - ((rect.y + rect.height - p.y) / rect.height) * -1 * dy));
+        point = new Point(round(p.x + ((p.x - rect.x) / rect.width) * dx), round(p.y - ((rect.y + rect.height - p.y) / rect.height) * -1 * dy));
     }
     if (isNaN(point.x) || isNaN(point.y) || !isFinite(point.x) || !isFinite(point.y)) {
         return p;
@@ -78,12 +81,12 @@ function scalePoint(p, dx, dy, rect, basePoint) {
 }
 exports.scalePoint = scalePoint;
 function translatePoint(delta, dx, dy) {
-    return new Point(exports.round(dx + delta.x), exports.round(dy + delta.y));
+    return new Point(round(dx + delta.x), round(dy + delta.y));
 }
 exports.translatePoint = translatePoint;
 function rotatePoint(angle, point, cX, cY) {
     let radians = angle / (180 / Math.PI);
-    return new Point(exports.round((point.x - cX) * Math.cos(radians) - (point.y - cY) * Math.sin(radians) + cX), exports.round((point.x - cX) * Math.sin(radians) + (point.y - cY) * Math.cos(radians) + cY));
+    return new Point(round((point.x - cX) * Math.cos(radians) - (point.y - cY) * Math.sin(radians) + cX), round((point.x - cX) * Math.sin(radians) + (point.y - cY) * Math.cos(radians) + cY));
 }
 exports.rotatePoint = rotatePoint;
 function rotatePoints(angle, points, cX, cY) {
@@ -115,9 +118,9 @@ function getAngle(centerPoint, startPoint, endPoint) {
     let a = lineLength(startPoint, centerPoint);
     let b = lineLength(endPoint, centerPoint);
     let c = lineLength(startPoint, endPoint);
-    let cos = exports.round((Math.pow(a, 2) + Math.pow(b, 2) - Math.pow(c, 2)) / (2 * a * b), 3);
+    let cos = round((Math.pow(a, 2) + Math.pow(b, 2) - Math.pow(c, 2)) / (2 * a * b), 3);
     let direction = getDirection(centerPoint, startPoint, endPoint);
-    return direction * exports.round((Math.acos(cos > 1 ? 1 : cos) * 180) / Math.PI, 2);
+    return direction * round((Math.acos(cos > 1 ? 1 : cos) * 180) / Math.PI, 2);
 }
 exports.getAngle = getAngle;
 function lineAngle(startPoint, endPoint) {
@@ -127,7 +130,7 @@ function lineAngle(startPoint, endPoint) {
     let c = lineLength(p1, endPoint);
     let cos = (Math.pow(a, 2) + Math.pow(b, 2) - Math.pow(c, 2)) / (2 * a * b);
     let direction = getDirection(startPoint, p1, endPoint);
-    return direction * exports.round((Math.acos(cos > 1 ? 1 : cos) * 180) / Math.PI, 3);
+    return direction * round((Math.acos(cos > 1 ? 1 : cos) * 180) / Math.PI, 3);
 }
 exports.lineAngle = lineAngle;
 function pointsCenter(startPoint, endPoint) {
@@ -143,11 +146,11 @@ function getDirection(centerPoint, startPoint, endPoint) {
 }
 exports.getDirection = getDirection;
 function lineLength(p1, p2) {
-    return exports.round(Math.sqrt(Math.pow(p1.x - p2.x, 2) + Math.pow(p1.y - p2.y, 2)), 4);
+    return round(Math.sqrt(Math.pow(p1.x - p2.x, 2) + Math.pow(p1.y - p2.y, 2)), 4);
 }
 exports.lineLength = lineLength;
 function lineLengthXY(x1, y1, x2, y2) {
-    return exports.round(Math.sqrt(Math.pow(x1 - x2, 2) + Math.pow(y1 - y2, 2)), 4);
+    return round(Math.sqrt(Math.pow(x1 - x2, 2) + Math.pow(y1 - y2, 2)), 4);
 }
 exports.lineLengthXY = lineLengthXY;
 function center(p1, p2) {
@@ -188,8 +191,8 @@ function linesIntersection(line1, line2) {
     b = line1.p0.x - line2.p0.x;
     numerator1 = (line2.p1.x - line2.p0.x) * a - (line2.p1.y - line2.p0.y) * b;
     numerator2 = (line1.p1.x - line1.p0.x) * a - (line1.p1.y - line1.p0.y) * b;
-    a = exports.round(numerator1 / denominator, 6);
-    b = exports.round(numerator2 / denominator, 6);
+    a = round(numerator1 / denominator, 6);
+    b = round(numerator2 / denominator, 6);
     result.point = new Point(line1.p0.x + a * (line1.p1.x - line1.p0.x), line1.p0.y + a * (line1.p1.y - line1.p0.y));
     if (a >= 0 && a <= 1)
         result.onLine1 = true;
@@ -207,7 +210,7 @@ function perpendicularPoint(start, end, pLength) {
     let c = center(start, end);
     const x = pLength * Math.cos((angle * Math.PI) / 180.0);
     const y = pLength * Math.sin((angle * Math.PI) / 180.0);
-    return new Point(c.x + exports.round(x, 1), c.y + exports.round(y, 1));
+    return new Point(c.x + round(x, 1), c.y + round(y, 1));
 }
 exports.perpendicularPoint = perpendicularPoint;
 function lineRectangleIntersections(line, rect) {

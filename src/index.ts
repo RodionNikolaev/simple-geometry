@@ -41,7 +41,9 @@ export enum BasePoint {
     Left = 3,
 }
 
-export let round = (value: number, roundValue: number = 1) => Math.round(Math.round(value / roundValue) * roundValue);
+export function round(number: number, digits: number = 3) {
+    return Math.round(number * Math.pow(10, digits)) / Math.pow(10, digits);
+}
 
 export let roundPoint = (point: Point, roundValue: number): Point =>
     !roundValue || roundValue == 0

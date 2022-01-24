@@ -30,7 +30,7 @@ export declare enum BasePoint {
     BottomLeft = 2,
     Left = 3,
 }
-export declare let round: (value: number, roundValue?: number) => number;
+export declare function round(number: number, digits?: number): number;
 export declare let roundPoint: (point: Point, roundValue: number) => Point;
 export declare function scalePoint(p: Point, dx: number, dy: number, rect: Rect, basePoint: BasePoint): Point;
 export declare function translatePoint(delta: Point, dx: number, dy: number): Point;
