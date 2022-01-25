@@ -41,37 +41,38 @@ export enum BasePoint {
     Left = 3,
 }
 
-export function round(number: number, digits: number = 3) {
+export function round(number: number, digits: number = 3): number {
     return Math.round(number * Math.pow(10, digits)) / Math.pow(10, digits);
 }
 
-export let roundPoint = (point: Point, roundValue: number): Point =>
-    !roundValue || roundValue == 0
-        ? point
-        : new Point(Math.round(round(point.x, roundValue)), Math.round(round(point.y, roundValue)));
+export let roundPoint = (point: Point, digits: number): Point =>
+    !digits || digits == 0 ? point : new Point(Math.round(round(point.x, digits)), Math.round(round(point.y, digits)));
 
-export function scalePoint(p: Point, dx: number, dy: number, rect: Rect, basePoint: BasePoint): Point {
+export function scalePoint(p: Point, dx: number, dy: number, boundingRect: Rect, basePoint: BasePoint): Point {
     let point: Point;
 
     if (basePoint == BasePoint.Left || basePoint == BasePoint.Right) dy = 0;
     else if (basePoint == BasePoint.Top || basePoint == BasePoint.Bottom) dx = 0;
 
     if (basePoint == BasePoint.TopLeft || basePoint == BasePoint.Left || basePoint == BasePoint.Top) {
-        point = new Point(round(p.x + ((p.x - rect.x) / rect.width) * dx), round(p.y + ((p.y - rect.y) / rect.height) * dy));
+        point = new Point(
+            round(p.x + ((p.x - boundingRect.x) / boundingRect.width) * dx),
+            round(p.y + ((p.y - boundingRect.y) / boundingRect.height) * dy)
+        );
     } else if (basePoint == BasePoint.TopRight || basePoint == BasePoint.Right) {
         point = new Point(
-            round(p.x - ((rect.x + rect.width - p.x) / rect.width) * -1 * dx),
-            round(p.y + ((p.y - rect.y) / rect.height) * dy)
+            round(p.x - ((boundingRect.x + boundingRect.width - p.x) / boundingRect.width) * -1 * dx),
+            round(p.y + ((p.y - boundingRect.y) / boundingRect.height) * dy)
         );
     } else if (basePoint == BasePoint.BottomRight) {
         point = new Point(
-            round(p.x - ((rect.x + rect.width - p.x) / rect.width) * -1 * dx),
-            round(p.y - ((rect.y + rect.height - p.y) / rect.height) * -1 * dy)
+            round(p.x - ((boundingRect.x + boundingRect.width - p.x) / boundingRect.width) * -1 * dx),
+            round(p.y - ((boundingRect.y + boundingRect.height - p.y) / boundingRect.height) * -1 * dy)
         );
     } else if (basePoint == BasePoint.BottomLeft || basePoint == BasePoint.Bottom) {
         point = new Point(
-            round(p.x + ((p.x - rect.x) / rect.width) * dx),
-            round(p.y - ((rect.y + rect.height - p.y) / rect.height) * -1 * dy)
+            round(p.x + ((p.x - boundingRect.x) / boundingRect.width) * dx),
+            round(p.y - ((boundingRect.y + boundingRect.height - p.y) / boundingRect.height) * -1 * dy)
         );
     }
 
@@ -109,10 +110,10 @@ export function contains(r1: Rect, r2: Rect): boolean {
     return r2.x + r2.width < r1.x + r1.width && r2.x > r1.x && r2.y > r1.y && r2.y + r2.height < r1.y + r1.height;
 }
 
-export function getViewBox(mousePosition: Point, viewBox: Rect, heightWidthRatio: number, zoomIn: boolean): Rect {
+export function getViewBox(point: Point, viewBox: Rect, heightWidthRatio: number, zoomIn: boolean): Rect {
     // Percentage offset mouse from top left corner
-    let offsetX = (mousePosition.x - viewBox.x) / viewBox.width;
-    let offsetY = (mousePosition.y - viewBox.y) / viewBox.height;
+    let offsetX = (point.x - viewBox.x) / viewBox.width;
+    let offsetY = (point.y - viewBox.y) / viewBox.height;
 
     let newWidth = zoomIn ? 0.8 * viewBox.width : 1.2 * viewBox.width;
 
@@ -141,7 +142,7 @@ export function lineAngle(startPoint: Point | { x: number; y: number }, endPoint
     let a = lineLength(p1, startPoint);
     let b = lineLength(endPoint, startPoint);
     let c = lineLength(p1, endPoint);
-    let cos = (Math.pow(a, 2) + Math.pow(b, 2) - Math.pow(c, 2)) / (2 * a * b);
+    let cos = round((Math.pow(a, 2) + Math.pow(b, 2) - Math.pow(c, 2)) / (2 * a * b), 4);
 
     let direction = getDirection(startPoint, p1, endPoint);
 
@@ -166,10 +167,6 @@ export function lineLength(p1: Point, p2: Point): number {
 
 export function lineLengthXY(x1: number, y1: number, x2: number, y2: number): number {
     return round(Math.sqrt(Math.pow(x1 - x2, 2) + Math.pow(y1 - y2, 2)), 4);
-}
-
-export function center(p1: Point, p2: Point) {
-    return new Point((p1.x + p2.x) / 2, (p1.y + p2.y) / 2);
 }
 
 export function pointIsOnLine(p: Point, p1: Point, p2: Point): boolean {
@@ -197,11 +194,11 @@ export function minDistanceLineEnds(l1: Line, p: Point) {
     return Math.min(lineLength(l1.p0, p), lineLength(l1.p1, p));
 }
 
-export type LinesIntersection = {
+export interface LinesIntersection {
     point: Point;
     onLine1: boolean;
     onLine2: boolean;
-};
+}
 
 export function linesIntersection(line1: Line, line2: Line): LinesIntersection {
     let denominator: number,
@@ -242,7 +239,7 @@ export function linesIntersection(line1: Line, line2: Line): LinesIntersection {
 
 export function perpendicularPoint(start: Point, end: Point, pLength: number): Point {
     const angle = lineAngle(start, end) - 90;
-    let c = center(start, end);
+    let c = pointsCenter(start, end);
     const x = pLength * Math.cos((angle * Math.PI) / 180.0);
     const y = pLength * Math.sin((angle * Math.PI) / 180.0);
     return new Point(c.x + round(x, 1), c.y + round(y, 1));
