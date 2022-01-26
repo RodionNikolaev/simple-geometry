@@ -41,12 +41,19 @@ export enum BasePoint {
     Left = 3,
 }
 
+/**
+ *
+ * @param number Value
+ * @param digits Number decimal digits
+ * @returns Rounded value
+ */
 export function round(number: number, digits: number = 3): number {
     return Math.round(number * Math.pow(10, digits)) / Math.pow(10, digits);
 }
 
-export let roundPoint = (point: Point, digits: number): Point =>
-    !digits || digits == 0 ? point : new Point(Math.round(round(point.x, digits)), Math.round(round(point.y, digits)));
+export function roundPoint(point: Point, digits: number): Point {
+    return !digits || digits == 0 ? point : new Point(Math.round(round(point.x, digits)), Math.round(round(point.y, digits)));
+}
 
 export function scalePoint(p: Point, dx: number, dy: number, boundingRect: Rect, basePoint: BasePoint): Point {
     let point: Point;
@@ -261,4 +268,23 @@ export function lineRectangleIntersections(line: Line, rect: Rect): Point[] {
     if (res.onLine1 && res.onLine2) points.push(new Point(res.point.x, res.point.y));
 
     return points;
+}
+
+export function lineCenter(p1: Point, p2: Point): Point {
+    return new Point((p1.x + p2.x) / 2, (p1.y + p2.y) / 2);
+}
+
+export function triangleArea(p1: Point, p2: Point, p3: Point): number {
+    return Math.abs(0.5 * (p1.x * (p2.y - p3.y) + p2.x * (p3.y - p1.y) + p3.x * (p1.y - p2.y)));
+}
+
+export function pointInsideRectangle(p: Point, rect: Rect): Point {
+    const rArea = lineLength(rect.p0, rect.p1) * lineLength(rect.p1, rect.p2);
+    const sAreas =
+        triangleArea(p, rect.p0, rect.p1) +
+        triangleArea(p, rect.p1, rect.p2) +
+        triangleArea(p, rect.p2, rect.p3) +
+        triangleArea(p, rect.p3, rect.p0);
+
+    return Math.abs(rArea - sAreas) < rArea * 0.01 ? p : null;
 }

@@ -43,7 +43,7 @@
 
 #### Defined in
 
-[index.ts:10](https://github.com/RodionNikolaev/simple-geometry/blob/e8bbfed/src/index.ts#L10)
+[index.ts:10](https://github.com/RodionNikolaev/simple-geometry/blob/a2a583f/src/index.ts#L10)
 
 ## Properties
 
@@ -81,7 +81,7 @@ ___
 
 #### Defined in
 
-[index.ts:16](https://github.com/RodionNikolaev/simple-geometry/blob/e8bbfed/src/index.ts#L16)
+[index.ts:16](https://github.com/RodionNikolaev/simple-geometry/blob/a2a583f/src/index.ts#L16)
 
 ___
 
@@ -95,7 +95,7 @@ ___
 
 #### Defined in
 
-[index.ts:12](https://github.com/RodionNikolaev/simple-geometry/blob/e8bbfed/src/index.ts#L12)
+[index.ts:12](https://github.com/RodionNikolaev/simple-geometry/blob/a2a583f/src/index.ts#L12)
 
 ___
 
@@ -109,7 +109,7 @@ ___
 
 #### Defined in
 
-[index.ts:20](https://github.com/RodionNikolaev/simple-geometry/blob/e8bbfed/src/index.ts#L20)
+[index.ts:20](https://github.com/RodionNikolaev/simple-geometry/blob/a2a583f/src/index.ts#L20)
 
 ___
 
@@ -123,7 +123,7 @@ ___
 
 #### Defined in
 
-[index.ts:24](https://github.com/RodionNikolaev/simple-geometry/blob/e8bbfed/src/index.ts#L24)
+[index.ts:24](https://github.com/RodionNikolaev/simple-geometry/blob/a2a583f/src/index.ts#L24)
 
 ## Methods
 
@@ -146,4 +146,4 @@ ___
 
 #### Defined in
 
-[index.ts:28](https://github.com/RodionNikolaev/simple-geometry/blob/e8bbfed/src/index.ts#L28)
+[index.ts:28](https://github.com/RodionNikolaev/simple-geometry/blob/a2a583f/src/index.ts#L28)

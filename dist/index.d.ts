@@ -14,10 +14,10 @@ export declare class Rect {
     p2: Point;
     p3: Point;
     constructor(p0: Point, p1: Point, p2: Point, p3: Point);
-    readonly width: number;
-    readonly height: number;
-    readonly x: number;
-    readonly y: number;
+    get width(): number;
+    get height(): number;
+    get x(): number;
+    get y(): number;
     static fromWH(x: number, y: number, width: number, height: number): Rect;
 }
 export declare enum BasePoint {
@@ -28,17 +28,23 @@ export declare enum BasePoint {
     BottomRight = 0,
     Bottom = 1,
     BottomLeft = 2,
-    Left = 3,
+    Left = 3
 }
+/**
+ *
+ * @param number Value
+ * @param digits Number decimal digits
+ * @returns Rounded value
+ */
 export declare function round(number: number, digits?: number): number;
-export declare let roundPoint: (point: Point, roundValue: number) => Point;
-export declare function scalePoint(p: Point, dx: number, dy: number, rect: Rect, basePoint: BasePoint): Point;
+export declare function roundPoint(point: Point, digits: number): Point;
+export declare function scalePoint(p: Point, dx: number, dy: number, boundingRect: Rect, basePoint: BasePoint): Point;
 export declare function translatePoint(delta: Point, dx: number, dy: number): Point;
 export declare function rotatePoint(angle: number, point: Point, cX: number, cY: number): Point;
 export declare function rotatePoints(angle: number, points: Point[], cX: number, cY: number): Point[];
 export declare let shiftPoint: (point: Point, length: number, angle: number) => Point;
 export declare function contains(r1: Rect, r2: Rect): boolean;
-export declare function getViewBox(mousePosition: Point, viewBox: Rect, heightWidthRatio: number, zoomIn: boolean): Rect;
+export declare function getViewBox(point: Point, viewBox: Rect, heightWidthRatio: number, zoomIn: boolean): Rect;
 export declare function getAngle(centerPoint: Point, startPoint: Point, endPoint: Point): number;
 export declare function lineAngle(startPoint: Point | {
     x: number;
@@ -51,18 +57,20 @@ export declare function pointsCenter(startPoint: Point, endPoint: Point): Point;
 export declare function getDirection(centerPoint: Point, startPoint: Point, endPoint: Point): number;
 export declare function lineLength(p1: Point, p2: Point): number;
 export declare function lineLengthXY(x1: number, y1: number, x2: number, y2: number): number;
-export declare function center(p1: Point, p2: Point): Point;
 export declare function pointIsOnLine(p: Point, p1: Point, p2: Point): boolean;
 export declare function perpendicularToLine(point: Point, start: Point, end: Point): {
     p: Point;
     isInside: boolean;
 };
 export declare function minDistanceLineEnds(l1: Line, p: Point): number;
-export declare type LinesIntersection = {
+export interface LinesIntersection {
     point: Point;
     onLine1: boolean;
     onLine2: boolean;
-};
+}
 export declare function linesIntersection(line1: Line, line2: Line): LinesIntersection;
 export declare function perpendicularPoint(start: Point, end: Point, pLength: number): Point;
 export declare function lineRectangleIntersections(line: Line, rect: Rect): Point[];
+export declare function lineCenter(p1: Point, p2: Point): Point;
+export declare function triangleArea(p1: Point, p2: Point, p3: Point): number;
+export declare function pointInsideRectangle(p: Point, rect: Rect): Point;

@@ -25,6 +25,7 @@
 - [getDirection](modules.md#getdirection)
 - [getViewBox](modules.md#getviewbox)
 - [lineAngle](modules.md#lineangle)
+- [lineCenter](modules.md#linecenter)
 - [lineLength](modules.md#linelength)
 - [lineLengthXY](modules.md#linelengthxy)
 - [lineRectangleIntersections](modules.md#linerectangleintersections)
@@ -32,6 +33,7 @@
 - [minDistanceLineEnds](modules.md#mindistancelineends)
 - [perpendicularPoint](modules.md#perpendicularpoint)
 - [perpendicularToLine](modules.md#perpendiculartoline)
+- [pointInsideRectangle](modules.md#pointinsiderectangle)
 - [pointIsOnLine](modules.md#pointisonline)
 - [pointsCenter](modules.md#pointscenter)
 - [rotatePoint](modules.md#rotatepoint)
@@ -41,6 +43,7 @@
 - [scalePoint](modules.md#scalepoint)
 - [shiftPoint](modules.md#shiftpoint)
 - [translatePoint](modules.md#translatepoint)
+- [triangleArea](modules.md#trianglearea)
 
 ## Functions
 
@@ -61,7 +64,7 @@
 
 #### Defined in
 
-[index.ts:109](https://github.com/RodionNikolaev/simple-geometry/blob/e8bbfed/src/index.ts#L109)
+[index.ts:116](https://github.com/RodionNikolaev/simple-geometry/blob/a2a583f/src/index.ts#L116)
 
 ___
 
@@ -83,7 +86,7 @@ ___
 
 #### Defined in
 
-[index.ts:128](https://github.com/RodionNikolaev/simple-geometry/blob/e8bbfed/src/index.ts#L128)
+[index.ts:135](https://github.com/RodionNikolaev/simple-geometry/blob/a2a583f/src/index.ts#L135)
 
 ___
 
@@ -105,7 +108,7 @@ ___
 
 #### Defined in
 
-[index.ts:156](https://github.com/RodionNikolaev/simple-geometry/blob/e8bbfed/src/index.ts#L156)
+[index.ts:163](https://github.com/RodionNikolaev/simple-geometry/blob/a2a583f/src/index.ts#L163)
 
 ___
 
@@ -128,7 +131,7 @@ ___
 
 #### Defined in
 
-[index.ts:113](https://github.com/RodionNikolaev/simple-geometry/blob/e8bbfed/src/index.ts#L113)
+[index.ts:120](https://github.com/RodionNikolaev/simple-geometry/blob/a2a583f/src/index.ts#L120)
 
 ___
 
@@ -149,7 +152,28 @@ ___
 
 #### Defined in
 
-[index.ts:139](https://github.com/RodionNikolaev/simple-geometry/blob/e8bbfed/src/index.ts#L139)
+[index.ts:146](https://github.com/RodionNikolaev/simple-geometry/blob/a2a583f/src/index.ts#L146)
+
+___
+
+### lineCenter
+
+▸ **lineCenter**(`p1`, `p2`): [`Point`](classes/Point.md)
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `p1` | [`Point`](classes/Point.md) |
+| `p2` | [`Point`](classes/Point.md) |
+
+#### Returns
+
+[`Point`](classes/Point.md)
+
+#### Defined in
+
+[index.ts:273](https://github.com/RodionNikolaev/simple-geometry/blob/a2a583f/src/index.ts#L273)
 
 ___
 
@@ -170,7 +194,7 @@ ___
 
 #### Defined in
 
-[index.ts:164](https://github.com/RodionNikolaev/simple-geometry/blob/e8bbfed/src/index.ts#L164)
+[index.ts:171](https://github.com/RodionNikolaev/simple-geometry/blob/a2a583f/src/index.ts#L171)
 
 ___
 
@@ -193,7 +217,7 @@ ___
 
 #### Defined in
 
-[index.ts:168](https://github.com/RodionNikolaev/simple-geometry/blob/e8bbfed/src/index.ts#L168)
+[index.ts:175](https://github.com/RodionNikolaev/simple-geometry/blob/a2a583f/src/index.ts#L175)
 
 ___
 
@@ -214,7 +238,7 @@ ___
 
 #### Defined in
 
-[index.ts:248](https://github.com/RodionNikolaev/simple-geometry/blob/e8bbfed/src/index.ts#L248)
+[index.ts:255](https://github.com/RodionNikolaev/simple-geometry/blob/a2a583f/src/index.ts#L255)
 
 ___
 
@@ -235,7 +259,7 @@ ___
 
 #### Defined in
 
-[index.ts:203](https://github.com/RodionNikolaev/simple-geometry/blob/e8bbfed/src/index.ts#L203)
+[index.ts:210](https://github.com/RodionNikolaev/simple-geometry/blob/a2a583f/src/index.ts#L210)
 
 ___
 
@@ -256,7 +280,7 @@ ___
 
 #### Defined in
 
-[index.ts:193](https://github.com/RodionNikolaev/simple-geometry/blob/e8bbfed/src/index.ts#L193)
+[index.ts:200](https://github.com/RodionNikolaev/simple-geometry/blob/a2a583f/src/index.ts#L200)
 
 ___
 
@@ -278,7 +302,7 @@ ___
 
 #### Defined in
 
-[index.ts:240](https://github.com/RodionNikolaev/simple-geometry/blob/e8bbfed/src/index.ts#L240)
+[index.ts:247](https://github.com/RodionNikolaev/simple-geometry/blob/a2a583f/src/index.ts#L247)
 
 ___
 
@@ -305,7 +329,28 @@ ___
 
 #### Defined in
 
-[index.ts:176](https://github.com/RodionNikolaev/simple-geometry/blob/e8bbfed/src/index.ts#L176)
+[index.ts:183](https://github.com/RodionNikolaev/simple-geometry/blob/a2a583f/src/index.ts#L183)
+
+___
+
+### pointInsideRectangle
+
+▸ **pointInsideRectangle**(`p`, `rect`): [`Point`](classes/Point.md)
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `p` | [`Point`](classes/Point.md) |
+| `rect` | [`Rect`](classes/Rect.md) |
+
+#### Returns
+
+[`Point`](classes/Point.md)
+
+#### Defined in
+
+[index.ts:281](https://github.com/RodionNikolaev/simple-geometry/blob/a2a583f/src/index.ts#L281)
 
 ___
 
@@ -327,7 +372,7 @@ ___
 
 #### Defined in
 
-[index.ts:172](https://github.com/RodionNikolaev/simple-geometry/blob/e8bbfed/src/index.ts#L172)
+[index.ts:179](https://github.com/RodionNikolaev/simple-geometry/blob/a2a583f/src/index.ts#L179)
 
 ___
 
@@ -348,7 +393,7 @@ ___
 
 #### Defined in
 
-[index.ts:152](https://github.com/RodionNikolaev/simple-geometry/blob/e8bbfed/src/index.ts#L152)
+[index.ts:159](https://github.com/RodionNikolaev/simple-geometry/blob/a2a583f/src/index.ts#L159)
 
 ___
 
@@ -371,7 +416,7 @@ ___
 
 #### Defined in
 
-[index.ts:90](https://github.com/RodionNikolaev/simple-geometry/blob/e8bbfed/src/index.ts#L90)
+[index.ts:97](https://github.com/RodionNikolaev/simple-geometry/blob/a2a583f/src/index.ts#L97)
 
 ___
 
@@ -394,7 +439,7 @@ ___
 
 #### Defined in
 
-[index.ts:98](https://github.com/RodionNikolaev/simple-geometry/blob/e8bbfed/src/index.ts#L98)
+[index.ts:105](https://github.com/RodionNikolaev/simple-geometry/blob/a2a583f/src/index.ts#L105)
 
 ___
 
@@ -404,18 +449,20 @@ ___
 
 #### Parameters
 
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `number` | `number` | `undefined` |
-| `digits` | `number` | `3` |
+| Name | Type | Default value | Description |
+| :------ | :------ | :------ | :------ |
+| `number` | `number` | `undefined` | Value |
+| `digits` | `number` | `3` | Number decimal digits |
 
 #### Returns
 
 `number`
 
+Rounded value
+
 #### Defined in
 
-[index.ts:44](https://github.com/RodionNikolaev/simple-geometry/blob/e8bbfed/src/index.ts#L44)
+[index.ts:50](https://github.com/RodionNikolaev/simple-geometry/blob/a2a583f/src/index.ts#L50)
 
 ___
 
@@ -436,7 +483,7 @@ ___
 
 #### Defined in
 
-[index.ts:48](https://github.com/RodionNikolaev/simple-geometry/blob/e8bbfed/src/index.ts#L48)
+[index.ts:54](https://github.com/RodionNikolaev/simple-geometry/blob/a2a583f/src/index.ts#L54)
 
 ___
 
@@ -460,7 +507,7 @@ ___
 
 #### Defined in
 
-[index.ts:51](https://github.com/RodionNikolaev/simple-geometry/blob/e8bbfed/src/index.ts#L51)
+[index.ts:58](https://github.com/RodionNikolaev/simple-geometry/blob/a2a583f/src/index.ts#L58)
 
 ___
 
@@ -482,7 +529,7 @@ ___
 
 #### Defined in
 
-[index.ts:102](https://github.com/RodionNikolaev/simple-geometry/blob/e8bbfed/src/index.ts#L102)
+[index.ts:109](https://github.com/RodionNikolaev/simple-geometry/blob/a2a583f/src/index.ts#L109)
 
 ___
 
@@ -504,4 +551,26 @@ ___
 
 #### Defined in
 
-[index.ts:86](https://github.com/RodionNikolaev/simple-geometry/blob/e8bbfed/src/index.ts#L86)
+[index.ts:93](https://github.com/RodionNikolaev/simple-geometry/blob/a2a583f/src/index.ts#L93)
+
+___
+
+### triangleArea
+
+▸ **triangleArea**(`p1`, `p2`, `p3`): `number`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `p1` | [`Point`](classes/Point.md) |
+| `p2` | [`Point`](classes/Point.md) |
+| `p3` | [`Point`](classes/Point.md) |
+
+#### Returns
+
+`number`
+
+#### Defined in
+
+[index.ts:277](https://github.com/RodionNikolaev/simple-geometry/blob/a2a583f/src/index.ts#L277)
