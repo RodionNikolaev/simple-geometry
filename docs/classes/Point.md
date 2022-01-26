@@ -28,7 +28,7 @@
 
 #### Defined in
 
-[index.ts:2](https://github.com/RodionNikolaev/simple-geometry/blob/a2a583f/src/index.ts#L2)
+[index.ts:2](https://github.com/RodionNikolaev/simple-geometry/blob/6ebf42c/src/index.ts#L2)
 
 ## Properties
 

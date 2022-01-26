@@ -31,7 +31,7 @@ export declare enum BasePoint {
     Left = 3
 }
 /**
- *
+ * Round value to the number of gecimal digits
  * @param number Value
  * @param digits Number decimal digits
  * @returns Rounded value
