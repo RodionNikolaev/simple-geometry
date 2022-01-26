@@ -6,7 +6,7 @@
     "types": "dist/index.d.ts",
     "scripts": {
         "build": "tsc",
-        "doc": "typedoc  --plugin typedoc-plugin-markdown  --name \"Simple geometry\" src/index.ts",
+        "doc": "typedoc --plugin typedoc-plugin-markdown --name \"Simple geometry\" src/index.ts",
         "test": "mocha -r ts-node/register tests/tests.ts"
     },
     "author": "Rodion Nikolaev",
