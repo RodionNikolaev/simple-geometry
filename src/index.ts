@@ -9,6 +9,10 @@ export class Line {
 export class Rect {
     constructor(public p0: Point, public p1: Point, public p2: Point, public p3: Point) {}
 
+    public static fromWH(x: number, y: number, width: number, height: number): Rect {
+        return new Rect(new Point(x, y), new Point(x + width, y), new Point(x + width, y + height), new Point(x, y + height));
+    }
+
     public get width(): number {
         return lineLength(this.p1, this.p2);
     }
@@ -24,9 +28,15 @@ export class Rect {
     public get y(): number {
         return this.p0.y;
     }
-
-    public static fromWH(x: number, y: number, width: number, height: number): Rect {
-        return new Rect(new Point(x, y), new Point(x + width, y), new Point(x + width, y + height), new Point(x, y + height));
+  
+    isZero(): boolean {
+        return this.x == 0 && this.y == 0 && this.width == 0 && this.height == 0;
+    }
+    public get center(): Point {
+        return { x: this.x + this.width / 2, y: this.y + this.height / 2 };
+    }
+    public get square(): number {
+        return this.width * this.height;
     }
 }
 

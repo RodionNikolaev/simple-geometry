@@ -14,11 +14,14 @@ export declare class Rect {
     p2: Point;
     p3: Point;
     constructor(p0: Point, p1: Point, p2: Point, p3: Point);
+    static fromWH(x: number, y: number, width: number, height: number): Rect;
     get width(): number;
     get height(): number;
     get x(): number;
     get y(): number;
-    static fromWH(x: number, y: number, width: number, height: number): Rect;
+    isZero(): boolean;
+    get center(): Point;
+    get square(): number;
 }
 export declare enum BasePoint {
     TopLeft = 4,

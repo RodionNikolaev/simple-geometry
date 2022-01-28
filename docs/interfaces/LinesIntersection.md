@@ -18,7 +18,7 @@
 
 #### Defined in
 
-[index.ts:206](https://github.com/RodionNikolaev/simple-geometry/blob/6ebf42c/src/index.ts#L206)
+[index.ts:216](https://github.com/RodionNikolaev/simple-geometry/blob/bed2868/src/index.ts#L216)
 
 ___
 
@@ -28,7 +28,7 @@ ___
 
 #### Defined in
 
-[index.ts:207](https://github.com/RodionNikolaev/simple-geometry/blob/6ebf42c/src/index.ts#L207)
+[index.ts:217](https://github.com/RodionNikolaev/simple-geometry/blob/bed2868/src/index.ts#L217)
 
 ___
 
@@ -38,4 +38,4 @@ ___
 
 #### Defined in
 
-[index.ts:205](https://github.com/RodionNikolaev/simple-geometry/blob/6ebf42c/src/index.ts#L205)
+[index.ts:215](https://github.com/RodionNikolaev/simple-geometry/blob/bed2868/src/index.ts#L215)
