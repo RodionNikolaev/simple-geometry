@@ -14,11 +14,11 @@ export class Rect {
     }
 
     public get width(): number {
-        return lineLength(this.p1, this.p2);
+        return lineLength(this.p0, this.p1);
     }
 
     public get height(): number {
-        return lineLength(this.p1, this.p0);
+        return lineLength(this.p1, this.p2);
     }
 
     public get x(): number {
