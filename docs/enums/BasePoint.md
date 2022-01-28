@@ -23,7 +23,7 @@
 
 #### Defined in
 
-[index.ts:49](https://github.com/RodionNikolaev/simple-geometry/blob/bed2868/src/index.ts#L49)
+[index.ts:49](https://github.com/RodionNikolaev/simple-geometry/blob/7b35362/src/index.ts#L49)
 
 ___
 
@@ -33,7 +33,7 @@ ___
 
 #### Defined in
 
-[index.ts:50](https://github.com/RodionNikolaev/simple-geometry/blob/bed2868/src/index.ts#L50)
+[index.ts:50](https://github.com/RodionNikolaev/simple-geometry/blob/7b35362/src/index.ts#L50)
 
 ___
 
@@ -43,7 +43,7 @@ ___
 
 #### Defined in
 
-[index.ts:48](https://github.com/RodionNikolaev/simple-geometry/blob/bed2868/src/index.ts#L48)
+[index.ts:48](https://github.com/RodionNikolaev/simple-geometry/blob/7b35362/src/index.ts#L48)
 
 ___
 
@@ -53,7 +53,7 @@ ___
 
 #### Defined in
 
-[index.ts:51](https://github.com/RodionNikolaev/simple-geometry/blob/bed2868/src/index.ts#L51)
+[index.ts:51](https://github.com/RodionNikolaev/simple-geometry/blob/7b35362/src/index.ts#L51)
 
 ___
 
@@ -63,7 +63,7 @@ ___
 
 #### Defined in
 
-[index.ts:47](https://github.com/RodionNikolaev/simple-geometry/blob/bed2868/src/index.ts#L47)
+[index.ts:47](https://github.com/RodionNikolaev/simple-geometry/blob/7b35362/src/index.ts#L47)
 
 ___
 
@@ -73,7 +73,7 @@ ___
 
 #### Defined in
 
-[index.ts:45](https://github.com/RodionNikolaev/simple-geometry/blob/bed2868/src/index.ts#L45)
+[index.ts:45](https://github.com/RodionNikolaev/simple-geometry/blob/7b35362/src/index.ts#L45)
 
 ___
 
@@ -83,7 +83,7 @@ ___
 
 #### Defined in
 
-[index.ts:44](https://github.com/RodionNikolaev/simple-geometry/blob/bed2868/src/index.ts#L44)
+[index.ts:44](https://github.com/RodionNikolaev/simple-geometry/blob/7b35362/src/index.ts#L44)
 
 ___
 
@@ -93,4 +93,4 @@ ___
 
 #### Defined in
 
-[index.ts:46](https://github.com/RodionNikolaev/simple-geometry/blob/bed2868/src/index.ts#L46)
+[index.ts:46](https://github.com/RodionNikolaev/simple-geometry/blob/7b35362/src/index.ts#L46)
