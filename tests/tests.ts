@@ -1,7 +1,6 @@
 import { expect } from "chai";
 import { describe, it } from "mocha";
-import { getLUT } from "../src/bezier";
-import { lineLength, Point, Rect } from "../src/index";
+import { getLUT, lineLength, Point, Rect, round } from "../src/index";
 
 let p0 = new Point(10, 20);
 let p1 = new Point(30, 20);
@@ -19,6 +18,16 @@ describe("Rect", () => {
         let { width, height } = rect;
         expect(width).to.equal(20);
         expect(height).equal(10);
+    });
+});
+
+describe("round", () => {
+    let point = new Point(20.554, 77.456);
+
+    it("should return 20.55, 77.46", () => {
+        expect(round(point.x, 2)).to.equal(20.55);
+        expect(round(point.y, 2)).to.equal(77.46);
+        expect(round(point, 2)).to.deep.equal({ x: 20.55, y: 77.46 });
     });
 });
 
