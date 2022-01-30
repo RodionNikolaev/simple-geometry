@@ -1,6 +1,7 @@
 import { expect } from "chai";
 import { describe, it } from "mocha";
-import { lineLength, Point, Rect } from "..";
+import { getLUT } from "../src/bezier";
+import { lineLength, Point, Rect } from "../src/index";
 
 let p0 = new Point(10, 20);
 let p1 = new Point(30, 20);
@@ -18,5 +19,18 @@ describe("Rect", () => {
         let { width, height } = rect;
         expect(width).to.equal(20);
         expect(height).equal(10);
+    });
+});
+
+describe("getLUT", () => {
+    it("should len 101", () => {
+        let lut = getLUT([
+            { x: 100, y: 25 },
+            { x: 10, y: 90 },
+            { x: 110, y: 100 },
+            { x: 150, y: 195 },
+        ]);
+
+        expect(lut.length).to.equal(101);
     });
 });

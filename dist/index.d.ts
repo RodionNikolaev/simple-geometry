@@ -39,7 +39,7 @@ export declare enum BasePoint {
  * @param digits Number decimal digits
  * @returns Rounded value
  */
-export declare function round(number: number, digits?: number): number;
+export declare function round(value: any, digits?: number): any;
 export declare function roundPoint(point: Point, digits: number): Point;
 export declare function scalePoint(p: Point, dx: number, dy: number, boundingRect: Rect, basePoint: BasePoint): Point;
 export declare function translatePoint(delta: Point, dx: number, dy: number): Point;
@@ -77,3 +77,5 @@ export declare function lineRectangleIntersections(line: Line, rect: Rect): Poin
 export declare function lineCenter(p1: Point, p2: Point): Point;
 export declare function triangleArea(p1: Point, p2: Point, p3: Point): number;
 export declare function pointInsideRectangle(p: Point, rect: Rect): Point;
+export declare function getLUT(points: Point[], steps?: number): any[];
+export declare function toD(points: Point[]): string;

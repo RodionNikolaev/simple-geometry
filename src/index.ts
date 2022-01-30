@@ -28,7 +28,7 @@ export class Rect {
     public get y(): number {
         return this.p0.y;
     }
-  
+
     isZero(): boolean {
         return this.x == 0 && this.y == 0 && this.width == 0 && this.height == 0;
     }
@@ -50,15 +50,17 @@ export enum BasePoint {
     BottomLeft = 2,
     Left = 3,
 }
-
 /**
  * Round value to the number of gecimal digits
  * @param number Value
  * @param digits Number decimal digits
  * @returns Rounded value
  */
-export function round(number: number, digits: number = 3): number {
-    return Math.round(number * Math.pow(10, digits)) / Math.pow(10, digits);
+export function round(value: any, digits: number = 3): any {
+    if (!digits || digits == 0) return value;
+
+    if (value instanceof Point) return new Point(round(value.x, digits), round(value.y, digits));
+    return Math.round(value * Math.pow(10, digits)) / Math.pow(10, digits);
 }
 
 export function roundPoint(point: Point, digits: number): Point {
@@ -297,4 +299,84 @@ export function pointInsideRectangle(p: Point, rect: Rect): Point {
         triangleArea(p, rect.p3, rect.p0);
 
     return Math.abs(rArea - sAreas) < rArea * 0.01 ? p : null;
+}
+
+
+/// Bezier functions
+
+
+export function getLUT(points: Point[], steps: number = 100) {
+    let lut = [];
+    // n steps means n+1 points
+    steps++;
+
+    for (let i = 0; i < steps; i++) {
+        let t = i / (steps - 1);
+        let p = roundPoint(compute(t, points), 3);
+        lut.push(p);
+    }
+    return lut;
+}
+
+function compute(t: number, points: Point[]): Point {
+    let p = points;
+
+    if (t === 0) return points[0];
+
+    const order = points.length - 1;
+
+    if (t === 1) return points[order];
+
+    const mt = 1 - t;
+
+    // constant?
+    if (order === 0) return points[0];
+
+    // linear?
+    if (order === 1) {
+        const ret = {
+            x: mt * p[0].x + t * p[1].x,
+            y: mt * p[0].y + t * p[1].y,
+            t: t,
+        };
+        return ret;
+    }
+
+    // quadratic/cubic curve?
+    let mt2 = mt * mt;
+    let t2 = t * t;
+    let a: number;
+    let b: number;
+    let c: number;
+    let d = 0;
+
+    if (order === 2) {
+        p = [p[0], p[1], p[2], { x: 0, y: 0 }];
+        a = mt2;
+        b = mt * t * 2;
+        c = t2;
+    } else if (order === 3) {
+        a = mt2 * mt;
+        b = mt2 * t * 3;
+        c = mt * t2 * 3;
+        d = t * t2;
+    }
+
+    const ret = {
+        x: a * p[0].x + b * p[1].x + c * p[2].x + d * p[3].x,
+        y: a * p[0].y + b * p[1].y + c * p[2].y + d * p[3].y,
+        t: t,
+    };
+    return ret;
+}
+
+export function toD(points: Point[]): string {
+    let str = "";
+
+    for (let i = 0; i < points.length; i++) {
+        const point = points[i];
+        str += i == 0 ? `M${point.x},${point.y}` : `L${point.x},${point.y}`;
+    }
+
+    return str;
 }
