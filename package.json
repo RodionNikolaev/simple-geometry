@@ -12,7 +12,7 @@
     ],
     "scripts": {
         "build": "tsc && uglifyjs dist/index.js -o dist/index.js && typedoc --plugin typedoc-plugin-markdown --name \"Simple geometry\" src/index.ts",
-        "test": "mocha -r ts-node/register tests/tests.ts"
+        "test": "mocha -r ts-node/register tests/**.ts"
     },
     "author": "Rodion Nikolaev",
     "homepage": "https://github.com/RodionNikolaev/simple-geometry",

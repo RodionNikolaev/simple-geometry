@@ -77,5 +77,5 @@ export declare function lineRectangleIntersections(line: Line, rect: Rect): Poin
 export declare function lineCenter(p1: Point, p2: Point): Point;
 export declare function triangleArea(p1: Point, p2: Point, p3: Point): number;
 export declare function pointInsideRectangle(p: Point, rect: Rect): Point;
-export declare function getLUT(points: Point[], steps?: number): any[];
+export declare function getLUT(points: Point[], steps?: number): Point[];
 export declare function toD(points: Point[]): string;

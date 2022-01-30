@@ -5,6 +5,7 @@
         "sourceMap": false,
         "target": "es6",
         "declaration": true,
+        "noImplicitAny": true,
         "outDir": "./dist",
         "alwaysStrict": true
     },

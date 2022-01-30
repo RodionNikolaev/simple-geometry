@@ -225,7 +225,7 @@ export function linesIntersection(line1: Line, line2: Line): LinesIntersection {
         b: number,
         numerator1: number,
         numerator2: number,
-        result = {
+        result: LinesIntersection = {
             point: null,
             onLine1: false,
             onLine2: false,
@@ -301,9 +301,7 @@ export function pointInsideRectangle(p: Point, rect: Rect): Point {
     return Math.abs(rArea - sAreas) < rArea * 0.01 ? p : null;
 }
 
-
 /// Bezier functions
-
 
 export function getLUT(points: Point[], steps: number = 100) {
     let lut = [];
