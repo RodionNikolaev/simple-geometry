@@ -59,7 +59,7 @@ export enum BasePoint {
 export function round(value: any, digits: number = 3): any {
     if (!digits || digits == 0) return value;
 
-    if (value instanceof Point) return new Point(round(value.x, digits), round(value.y, digits));
+    if (value.x != undefined && value.y != undefined) return new Point(round(value.x, digits), round(value.y, digits));
     return Math.round(value * Math.pow(10, digits)) / Math.pow(10, digits);
 }
 
@@ -303,14 +303,14 @@ export function pointInsideRectangle(p: Point, rect: Rect): Point {
 
 /// Bezier functions
 
-export function getLUT(points: Point[], steps: number = 100) {
+export function getLUT(points: Point[], steps: number = 100): Point[] {
     let lut = [];
     // n steps means n+1 points
     steps++;
 
     for (let i = 0; i < steps; i++) {
         let t = i / (steps - 1);
-        let p = roundPoint(compute(t, points), 3);
+        let p = round(compute(t, points), 3);
         lut.push(p);
     }
     return lut;
