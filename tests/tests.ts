@@ -1,6 +1,17 @@
 import { expect } from "chai";
 import { describe, it } from "mocha";
-import { getLUT, lineLength, Point, Rect, round } from "../src/index";
+import {
+    getLUT,
+    Line,
+    lineLength,
+    linesIntersection,
+    linesIntersectionXY,
+    minDistanceLineEnds,
+    minDistanceLineEndsXY,
+    Point,
+    Rect,
+    round,
+} from "../src/index";
 
 let p0 = new Point(10, 20);
 let p1 = new Point(30, 20);
@@ -41,5 +52,27 @@ describe("getLUT", () => {
         ]);
 
         expect(lut.length).to.equal(101);
+    });
+});
+
+describe("linesIntersectionXY", () => {
+    it("true, true, 300, 100", () => {
+        let intersection = linesIntersection(
+            new Line(new Point(100, 100), new Point(400, 100)),
+            new Line(new Point(300, 300), new Point(300, 100))
+        );
+
+        expect(intersection.onLine1).to.equal(true);
+        expect(intersection.onLine2).to.equal(true);
+        expect(round(intersection.point.x, 1)).to.equal(300);
+        expect(round(intersection.point.y, 1)).to.equal(100);
+    });
+});
+
+describe("minDistanceLineEndsXY", () => {
+    it("223.6", () => {
+        let dist = minDistanceLineEnds(new Line(new Point(100, 100), new Point(400, 100)), new Point(300, 300));
+
+        expect(round(dist, 1)).to.equal(round(Math.sqrt(100 * 100 + 200 * 200), 1));
     });
 });

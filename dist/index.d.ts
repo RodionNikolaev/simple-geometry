@@ -66,12 +66,14 @@ export declare function perpendicularToLine(point: Point, start: Point, end: Poi
     isInside: boolean;
 };
 export declare function minDistanceLineEnds(l1: Line, p: Point): number;
+export declare function minDistanceLineEndsXY(x1: number, y1: number, x2: number, y2: number, x: number, y: number): number;
 export interface LinesIntersection {
     point: Point;
     onLine1: boolean;
     onLine2: boolean;
 }
-export declare function linesIntersection(line1: Line, line2: Line): LinesIntersection;
+export declare function linesIntersection(line1: Line, line2: Line, minDistance?: number): LinesIntersection;
+export declare function linesIntersectionXY(x1: number, y1: number, x2: number, y2: number, x3: number, y3: number, x4: number, y4: number, minDistance?: number): LinesIntersection;
 export declare function perpendicularPoint(start: Point, end: Point, pLength: number): Point;
 export declare function lineRectangleIntersections(line: Line, rect: Rect): Point[];
 export declare function lineCenter(p1: Point, p2: Point): Point;

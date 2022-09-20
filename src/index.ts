@@ -213,13 +213,43 @@ export function minDistanceLineEnds(l1: Line, p: Point) {
     return Math.min(lineLength(l1.p0, p), lineLength(l1.p1, p));
 }
 
+export function minDistanceLineEndsXY(x1: number, y1: number, x2: number, y2: number, x: number, y: number) {
+    return Math.min(lineLengthXY(x1, y1, x, y), lineLengthXY(x2, y2, x, y));
+}
+
 export interface LinesIntersection {
     point: Point;
     onLine1: boolean;
     onLine2: boolean;
 }
 
-export function linesIntersection(line1: Line, line2: Line): LinesIntersection {
+export function linesIntersection(line1: Line, line2: Line, minDistance: number = 0): LinesIntersection {
+    return linesIntersectionXY(
+        line1.p0.x,
+        line1.p0.y,
+        line1.p1.x,
+        line1.p1.y,
+        line2.p0.x,
+        line2.p0.y,
+        line2.p1.x,
+        line2.p1.y,
+        minDistance
+    );
+}
+
+export function linesIntersectionXY(
+    x1: number,
+    y1: number,
+    x2: number,
+    y2: number,
+
+    x3: number,
+    y3: number,
+    x4: number,
+    y4: number,
+
+    minDistance: number = 0
+): LinesIntersection {
     let denominator: number,
         a: number,
         b: number,
@@ -231,31 +261,31 @@ export function linesIntersection(line1: Line, line2: Line): LinesIntersection {
             onLine2: false,
         };
 
-    denominator = (line2.p1.y - line2.p0.y) * (line1.p1.x - line1.p0.x) - (line2.p1.x - line2.p0.x) * (line1.p1.y - line1.p0.y);
+    denominator = (y4 - y3) * (x2 - x1) - (x4 - x3) * (y2 - y1);
     if (denominator === 0) return result;
 
-    a = line1.p0.y - line2.p0.y;
-    b = line1.p0.x - line2.p0.x;
-    numerator1 = (line2.p1.x - line2.p0.x) * a - (line2.p1.y - line2.p0.y) * b;
-    numerator2 = (line1.p1.x - line1.p0.x) * a - (line1.p1.y - line1.p0.y) * b;
+    a = y1 - y3;
+    b = x1 - x3;
+    numerator1 = (x4 - x3) * a - (y4 - y3) * b;
+    numerator2 = (x2 - x1) * a - (y2 - y1) * b;
     a = round(numerator1 / denominator, 6);
     b = round(numerator2 / denominator, 6);
 
-    result.point = new Point(line1.p0.x + a * (line1.p1.x - line1.p0.x), line1.p0.y + a * (line1.p1.y - line1.p0.y));
+    result.point = new Point(x1 + a * (x2 - x1), y1 + a * (y2 - y1));
 
     if (a >= 0 && a <= 1) result.onLine1 = true;
     if (b >= 0 && b <= 1) result.onLine2 = true;
 
     if (
+        minDistance &&
         (!result.onLine1 || !result.onLine2) &&
-        ((result.onLine1 && minDistanceLineEnds(line2, result.point) <= 0.1) ||
-            (result.onLine2 && minDistanceLineEnds(line1, result.point) <= 0.1))
+        ((result.onLine1 && minDistanceLineEndsXY(x3, y3, x4, y4, result.point.x, result.point.y) <= minDistance) ||
+            (result.onLine2 && minDistanceLineEndsXY(x1, y1, x2, y2, result.point.x, result.point.y) <= minDistance))
     )
         result.onLine1 = result.onLine2 = true;
 
     return result;
 }
-
 export function perpendicularPoint(start: Point, end: Point, pLength: number): Point {
     const angle = lineAngle(start, end) - 90;
     let c = pointsCenter(start, end);
