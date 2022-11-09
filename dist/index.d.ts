@@ -79,5 +79,20 @@ export declare function lineRectangleIntersections(line: Line, rect: Rect): Poin
 export declare function lineCenter(p1: Point, p2: Point): Point;
 export declare function triangleArea(p1: Point, p2: Point, p3: Point): number;
 export declare function pointInsideRectangle(p: Point, rect: Rect): Point;
+/**
+ *
+ * @param p point
+ * @param rect unrotated rectangle
+ * @returns
+ */
+export declare function pointInsideRectangleUnrotated(p: Point, rect: Rect): boolean;
+/**
+ * Detect smaller unrotated rectangle inside the bigger unrotated rectangle
+ * @param rect1 Bigger rectangle
+ * @param rect2 Smaller rectangle
+ * @returns
+ */
+export declare function rectangleInsideRectangleUnrotated(rect1: Rect, rect2: Rect): boolean;
+export declare function calculateBoundsRect(points: Point[]): Rect;
 export declare function getLUT(points: Point[], steps?: number): Point[];
 export declare function toD(points: Point[]): string;

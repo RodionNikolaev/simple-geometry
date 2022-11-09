@@ -20,6 +20,7 @@
 
 ### Functions
 
+- [calculateBoundsRect](modules.md#calculateboundsrect)
 - [contains](modules.md#contains)
 - [getAngle](modules.md#getangle)
 - [getDirection](modules.md#getdirection)
@@ -37,8 +38,10 @@
 - [perpendicularPoint](modules.md#perpendicularpoint)
 - [perpendicularToLine](modules.md#perpendiculartoline)
 - [pointInsideRectangle](modules.md#pointinsiderectangle)
+- [pointInsideRectangleUnrotated](modules.md#pointinsiderectangleunrotated)
 - [pointIsOnLine](modules.md#pointisonline)
 - [pointsCenter](modules.md#pointscenter)
+- [rectangleInsideRectangleUnrotated](modules.md#rectangleinsiderectangleunrotated)
 - [rotatePoint](modules.md#rotatepoint)
 - [rotatePoints](modules.md#rotatepoints)
 - [round](modules.md#round)
@@ -50,6 +53,26 @@
 - [triangleArea](modules.md#trianglearea)
 
 ## Functions
+
+### calculateBoundsRect
+
+▸ **calculateBoundsRect**(`points`): [`Rect`](classes/Rect.md)
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `points` | [`Point`](classes/Point.md)[] |
+
+#### Returns
+
+[`Rect`](classes/Rect.md)
+
+#### Defined in
+
+[index.ts:360](https://github.com/RodionNikolaev/simple-geometry/blob/285ab4d/src/index.ts#L360)
+
+___
 
 ### contains
 
@@ -68,7 +91,7 @@
 
 #### Defined in
 
-[index.ts:128](https://github.com/RodionNikolaev/simple-geometry/blob/ac07b44/src/index.ts#L128)
+[index.ts:128](https://github.com/RodionNikolaev/simple-geometry/blob/285ab4d/src/index.ts#L128)
 
 ___
 
@@ -90,7 +113,7 @@ ___
 
 #### Defined in
 
-[index.ts:147](https://github.com/RodionNikolaev/simple-geometry/blob/ac07b44/src/index.ts#L147)
+[index.ts:147](https://github.com/RodionNikolaev/simple-geometry/blob/285ab4d/src/index.ts#L147)
 
 ___
 
@@ -112,7 +135,7 @@ ___
 
 #### Defined in
 
-[index.ts:175](https://github.com/RodionNikolaev/simple-geometry/blob/ac07b44/src/index.ts#L175)
+[index.ts:175](https://github.com/RodionNikolaev/simple-geometry/blob/285ab4d/src/index.ts#L175)
 
 ___
 
@@ -133,7 +156,7 @@ ___
 
 #### Defined in
 
-[index.ts:336](https://github.com/RodionNikolaev/simple-geometry/blob/ac07b44/src/index.ts#L336)
+[index.ts:376](https://github.com/RodionNikolaev/simple-geometry/blob/285ab4d/src/index.ts#L376)
 
 ___
 
@@ -156,7 +179,7 @@ ___
 
 #### Defined in
 
-[index.ts:132](https://github.com/RodionNikolaev/simple-geometry/blob/ac07b44/src/index.ts#L132)
+[index.ts:132](https://github.com/RodionNikolaev/simple-geometry/blob/285ab4d/src/index.ts#L132)
 
 ___
 
@@ -177,7 +200,7 @@ ___
 
 #### Defined in
 
-[index.ts:158](https://github.com/RodionNikolaev/simple-geometry/blob/ac07b44/src/index.ts#L158)
+[index.ts:158](https://github.com/RodionNikolaev/simple-geometry/blob/285ab4d/src/index.ts#L158)
 
 ___
 
@@ -198,7 +221,7 @@ ___
 
 #### Defined in
 
-[index.ts:315](https://github.com/RodionNikolaev/simple-geometry/blob/ac07b44/src/index.ts#L315)
+[index.ts:316](https://github.com/RodionNikolaev/simple-geometry/blob/285ab4d/src/index.ts#L316)
 
 ___
 
@@ -219,7 +242,7 @@ ___
 
 #### Defined in
 
-[index.ts:183](https://github.com/RodionNikolaev/simple-geometry/blob/ac07b44/src/index.ts#L183)
+[index.ts:183](https://github.com/RodionNikolaev/simple-geometry/blob/285ab4d/src/index.ts#L183)
 
 ___
 
@@ -242,7 +265,7 @@ ___
 
 #### Defined in
 
-[index.ts:187](https://github.com/RodionNikolaev/simple-geometry/blob/ac07b44/src/index.ts#L187)
+[index.ts:187](https://github.com/RodionNikolaev/simple-geometry/blob/285ab4d/src/index.ts#L187)
 
 ___
 
@@ -263,7 +286,7 @@ ___
 
 #### Defined in
 
-[index.ts:297](https://github.com/RodionNikolaev/simple-geometry/blob/ac07b44/src/index.ts#L297)
+[index.ts:298](https://github.com/RodionNikolaev/simple-geometry/blob/285ab4d/src/index.ts#L298)
 
 ___
 
@@ -285,7 +308,7 @@ ___
 
 #### Defined in
 
-[index.ts:226](https://github.com/RodionNikolaev/simple-geometry/blob/ac07b44/src/index.ts#L226)
+[index.ts:226](https://github.com/RodionNikolaev/simple-geometry/blob/285ab4d/src/index.ts#L226)
 
 ___
 
@@ -313,7 +336,7 @@ ___
 
 #### Defined in
 
-[index.ts:240](https://github.com/RodionNikolaev/simple-geometry/blob/ac07b44/src/index.ts#L240)
+[index.ts:240](https://github.com/RodionNikolaev/simple-geometry/blob/285ab4d/src/index.ts#L240)
 
 ___
 
@@ -334,7 +357,7 @@ ___
 
 #### Defined in
 
-[index.ts:212](https://github.com/RodionNikolaev/simple-geometry/blob/ac07b44/src/index.ts#L212)
+[index.ts:212](https://github.com/RodionNikolaev/simple-geometry/blob/285ab4d/src/index.ts#L212)
 
 ___
 
@@ -359,7 +382,7 @@ ___
 
 #### Defined in
 
-[index.ts:216](https://github.com/RodionNikolaev/simple-geometry/blob/ac07b44/src/index.ts#L216)
+[index.ts:216](https://github.com/RodionNikolaev/simple-geometry/blob/285ab4d/src/index.ts#L216)
 
 ___
 
@@ -381,7 +404,7 @@ ___
 
 #### Defined in
 
-[index.ts:289](https://github.com/RodionNikolaev/simple-geometry/blob/ac07b44/src/index.ts#L289)
+[index.ts:290](https://github.com/RodionNikolaev/simple-geometry/blob/285ab4d/src/index.ts#L290)
 
 ___
 
@@ -408,7 +431,7 @@ ___
 
 #### Defined in
 
-[index.ts:195](https://github.com/RodionNikolaev/simple-geometry/blob/ac07b44/src/index.ts#L195)
+[index.ts:195](https://github.com/RodionNikolaev/simple-geometry/blob/285ab4d/src/index.ts#L195)
 
 ___
 
@@ -429,7 +452,28 @@ ___
 
 #### Defined in
 
-[index.ts:323](https://github.com/RodionNikolaev/simple-geometry/blob/ac07b44/src/index.ts#L323)
+[index.ts:324](https://github.com/RodionNikolaev/simple-geometry/blob/285ab4d/src/index.ts#L324)
+
+___
+
+### pointInsideRectangleUnrotated
+
+▸ **pointInsideRectangleUnrotated**(`p`, `rect`): `boolean`
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `p` | [`Point`](classes/Point.md) | point |
+| `rect` | [`Rect`](classes/Rect.md) | unrotated rectangle |
+
+#### Returns
+
+`boolean`
+
+#### Defined in
+
+[index.ts:341](https://github.com/RodionNikolaev/simple-geometry/blob/285ab4d/src/index.ts#L341)
 
 ___
 
@@ -451,7 +495,7 @@ ___
 
 #### Defined in
 
-[index.ts:191](https://github.com/RodionNikolaev/simple-geometry/blob/ac07b44/src/index.ts#L191)
+[index.ts:191](https://github.com/RodionNikolaev/simple-geometry/blob/285ab4d/src/index.ts#L191)
 
 ___
 
@@ -472,7 +516,30 @@ ___
 
 #### Defined in
 
-[index.ts:171](https://github.com/RodionNikolaev/simple-geometry/blob/ac07b44/src/index.ts#L171)
+[index.ts:171](https://github.com/RodionNikolaev/simple-geometry/blob/285ab4d/src/index.ts#L171)
+
+___
+
+### rectangleInsideRectangleUnrotated
+
+▸ **rectangleInsideRectangleUnrotated**(`rect1`, `rect2`): `boolean`
+
+Detect smaller unrotated rectangle inside the bigger unrotated rectangle
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `rect1` | [`Rect`](classes/Rect.md) | Bigger rectangle |
+| `rect2` | [`Rect`](classes/Rect.md) | Smaller rectangle |
+
+#### Returns
+
+`boolean`
+
+#### Defined in
+
+[index.ts:351](https://github.com/RodionNikolaev/simple-geometry/blob/285ab4d/src/index.ts#L351)
 
 ___
 
@@ -495,7 +562,7 @@ ___
 
 #### Defined in
 
-[index.ts:109](https://github.com/RodionNikolaev/simple-geometry/blob/ac07b44/src/index.ts#L109)
+[index.ts:109](https://github.com/RodionNikolaev/simple-geometry/blob/285ab4d/src/index.ts#L109)
 
 ___
 
@@ -518,7 +585,7 @@ ___
 
 #### Defined in
 
-[index.ts:117](https://github.com/RodionNikolaev/simple-geometry/blob/ac07b44/src/index.ts#L117)
+[index.ts:117](https://github.com/RodionNikolaev/simple-geometry/blob/285ab4d/src/index.ts#L117)
 
 ___
 
@@ -543,7 +610,7 @@ Rounded value
 
 #### Defined in
 
-[index.ts:59](https://github.com/RodionNikolaev/simple-geometry/blob/ac07b44/src/index.ts#L59)
+[index.ts:59](https://github.com/RodionNikolaev/simple-geometry/blob/285ab4d/src/index.ts#L59)
 
 ___
 
@@ -564,7 +631,7 @@ ___
 
 #### Defined in
 
-[index.ts:66](https://github.com/RodionNikolaev/simple-geometry/blob/ac07b44/src/index.ts#L66)
+[index.ts:66](https://github.com/RodionNikolaev/simple-geometry/blob/285ab4d/src/index.ts#L66)
 
 ___
 
@@ -588,7 +655,7 @@ ___
 
 #### Defined in
 
-[index.ts:70](https://github.com/RodionNikolaev/simple-geometry/blob/ac07b44/src/index.ts#L70)
+[index.ts:70](https://github.com/RodionNikolaev/simple-geometry/blob/285ab4d/src/index.ts#L70)
 
 ___
 
@@ -610,7 +677,7 @@ ___
 
 #### Defined in
 
-[index.ts:121](https://github.com/RodionNikolaev/simple-geometry/blob/ac07b44/src/index.ts#L121)
+[index.ts:121](https://github.com/RodionNikolaev/simple-geometry/blob/285ab4d/src/index.ts#L121)
 
 ___
 
@@ -630,7 +697,7 @@ ___
 
 #### Defined in
 
-[index.ts:401](https://github.com/RodionNikolaev/simple-geometry/blob/ac07b44/src/index.ts#L401)
+[index.ts:441](https://github.com/RodionNikolaev/simple-geometry/blob/285ab4d/src/index.ts#L441)
 
 ___
 
@@ -652,7 +719,7 @@ ___
 
 #### Defined in
 
-[index.ts:105](https://github.com/RodionNikolaev/simple-geometry/blob/ac07b44/src/index.ts#L105)
+[index.ts:105](https://github.com/RodionNikolaev/simple-geometry/blob/285ab4d/src/index.ts#L105)
 
 ___
 
@@ -674,4 +741,4 @@ ___
 
 #### Defined in
 
-[index.ts:319](https://github.com/RodionNikolaev/simple-geometry/blob/ac07b44/src/index.ts#L319)
+[index.ts:320](https://github.com/RodionNikolaev/simple-geometry/blob/285ab4d/src/index.ts#L320)

@@ -1,13 +1,12 @@
 import { expect } from "chai";
 import { describe, it } from "mocha";
 import {
+    calculateBoundsRect,
     getLUT,
     Line,
     lineLength,
     linesIntersection,
-    linesIntersectionXY,
     minDistanceLineEnds,
-    minDistanceLineEndsXY,
     Point,
     Rect,
     round,
@@ -74,5 +73,15 @@ describe("minDistanceLineEndsXY", () => {
         let dist = minDistanceLineEnds(new Line(new Point(100, 100), new Point(400, 100)), new Point(300, 300));
 
         expect(round(dist, 1)).to.equal(round(Math.sqrt(100 * 100 + 200 * 200), 1));
+    });
+});
+
+describe("calculateBoundsRect", () => {
+    it("", () => {
+        let points = [new Point(300, 200), new Point(200, 0), new Point(0, 100), new Point(100, 400)];
+
+        const rect = calculateBoundsRect(points);
+        expect(rect.width).to.equal(300);
+        expect(rect.height).to.equal(400);
     });
 });

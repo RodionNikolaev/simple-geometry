@@ -286,6 +286,7 @@ export function linesIntersectionXY(
 
     return result;
 }
+
 export function perpendicularPoint(start: Point, end: Point, pLength: number): Point {
     const angle = lineAngle(start, end) - 90;
     let c = pointsCenter(start, end);
@@ -329,6 +330,45 @@ export function pointInsideRectangle(p: Point, rect: Rect): Point {
         triangleArea(p, rect.p3, rect.p0);
 
     return Math.abs(rArea - sAreas) < rArea * 0.01 ? p : null;
+}
+
+/**
+ * 
+ * @param p point
+ * @param rect unrotated rectangle
+ * @returns 
+ */
+export function pointInsideRectangleUnrotated(p: Point, rect: Rect): boolean {
+    return p.x > rect.p0.x && p.x < rect.p2.x && p.y > rect.p0.y && p.y < rect.p2.y;
+}
+
+/**
+ * Detect smaller unrotated rectangle inside the bigger unrotated rectangle 
+ * @param rect1 Bigger rectangle
+ * @param rect2 Smaller rectangle
+ * @returns 
+ */
+export function rectangleInsideRectangleUnrotated(rect1: Rect, rect2: Rect): boolean {
+    return (
+        pointInsideRectangleUnrotated(rect2.p0, rect1) &&
+        pointInsideRectangleUnrotated(rect2.p1, rect1) &&
+        pointInsideRectangleUnrotated(rect2.p2, rect1) &&
+        pointInsideRectangleUnrotated(rect2.p3, rect1)
+    );
+}
+
+export function calculateBoundsRect(points: Point[]): Rect {
+    points = points.sort((a, b) => a.x - b.x);
+
+    var x1 = points[0].x;
+    var x2 = points[points.length - 1].x;
+
+    points = points.sort((a, b) => a.y - b.y);
+
+    var y1 = points[0].y;
+    var y2 = points[points.length - 1].y;
+
+    return new Rect(new Point(x1, y1), new Point(x2, y1), new Point(x2, y2), new Point(x1, y2));
 }
 
 /// Bezier functions
