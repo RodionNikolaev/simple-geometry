@@ -118,12 +118,12 @@ export function rotatePoints(angle: number, points: Point[], cX: number, cY: num
     return points.map((point) => rotatePoint(angle, point, cX, cY));
 }
 
-export let shiftPoint = (point: Point, length: number, angle: number): Point => {
+export function shiftPoint(point: Point, length: number, angle: number): Point {
     return {
         x: point.x + length * Math.sin(((90 - angle) * Math.PI) / 180.0),
         y: point.y + length * Math.sin((angle * Math.PI) / 180.0),
     };
-};
+}
 
 export function contains(r1: Rect, r2: Rect): boolean {
     return r2.x + r2.width < r1.x + r1.width && r2.x > r1.x && r2.y > r1.y && r2.y + r2.height < r1.y + r1.height;
@@ -332,21 +332,41 @@ export function pointInsideRectangle(p: Point, rect: Rect): Point {
     return Math.abs(rArea - sAreas) < rArea * 0.01 ? p : null;
 }
 
+export function pointInsidePolygon(point: Point, polygon: Point[], excludeBounds: boolean = false): boolean {
+    if (excludeBounds)
+        for (var i = 0; i < polygon.length - 1; i++) if (pointIsOnLine(point, polygon[i], polygon[i + 1])) return false;
+
+    let result = false;
+    let j = polygon.length - 1;
+    for (var i = 0; i < polygon.length; i++) {
+        if ((polygon[i].y < point.y && polygon[j].y >= point.y) || (polygon[j].y < point.y && polygon[i].y >= point.y)) {
+            if (
+                polygon[i].x + ((point.y - polygon[i].y) / (polygon[j].y - polygon[i].y)) * (polygon[j].x - polygon[i].x) <
+                point.x
+            ) {
+                result = !result;
+            }
+        }
+        j = i;
+    }
+    return result;
+}
+
 /**
- * 
+ *
  * @param p point
  * @param rect unrotated rectangle
- * @returns 
+ * @returns
  */
 export function pointInsideRectangleUnrotated(p: Point, rect: Rect): boolean {
     return p.x > rect.p0.x && p.x < rect.p2.x && p.y > rect.p0.y && p.y < rect.p2.y;
 }
 
 /**
- * Detect smaller unrotated rectangle inside the bigger unrotated rectangle 
+ * Detect smaller unrotated rectangle inside the bigger unrotated rectangle
  * @param rect1 Bigger rectangle
  * @param rect2 Smaller rectangle
- * @returns 
+ * @returns
  */
 export function rectangleInsideRectangleUnrotated(rect1: Rect, rect2: Rect): boolean {
     return (
@@ -357,8 +377,26 @@ export function rectangleInsideRectangleUnrotated(rect1: Rect, rect2: Rect): boo
     );
 }
 
-export function calculateBoundsRect(points: Point[]): Rect {
-    points = points.sort((a, b) => a.x - b.x);
+export function сentroid(points: Point[]) {
+    let accumulatedArea = 0;
+    let centerX = 0;
+    let centerY = 0;
+
+    for (var i = 0, j = points.length - 1; i < points.length; j = i++) {
+        if (points[i] == null || points[j] == null) continue;
+
+        var temp = points[i].x * points[j].y - points[j].x * points[i].y;
+        accumulatedArea += temp;
+        centerX += (points[i].x + points[j].x) * temp;
+        centerY += (points[i].y + points[j].y) * temp;
+    }
+
+    accumulatedArea *= 3;
+    return new Point(centerX / accumulatedArea, centerY / accumulatedArea);
+}
+
+export function calculateBoundsRect(pts: Point[]): Rect {
+    let points = [].concat(pts).sort((a, b) => a.x - b.x);
 
     var x1 = points[0].x;
     var x2 = points[points.length - 1].x;
@@ -369,6 +407,26 @@ export function calculateBoundsRect(points: Point[]): Rect {
     var y2 = points[points.length - 1].y;
 
     return new Rect(new Point(x1, y1), new Point(x2, y1), new Point(x2, y2), new Point(x1, y2));
+}
+
+export function intersectPolygons(points: Point[], polygon: Point[]): boolean {
+    for (var i = 1; i < points.length; i++) {
+        for (var j = 1; j < polygon.length; j++) {
+            var inter = linesIntersectionXY(
+                points[i - 1].x,
+                points[i - 1].y,
+                points[i].x,
+                points[i].y,
+                polygon[j - 1].x,
+                polygon[j - 1].y,
+                polygon[j].x,
+                polygon[j].y
+            );
+            if (inter.onLine1 && inter.onLine2) return true;
+        }
+    }
+
+    return false;
 }
 
 /// Bezier functions

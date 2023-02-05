@@ -45,7 +45,7 @@ export declare function scalePoint(p: Point, dx: number, dy: number, boundingRec
 export declare function translatePoint(delta: Point, dx: number, dy: number): Point;
 export declare function rotatePoint(angle: number, point: Point, cX: number, cY: number): Point;
 export declare function rotatePoints(angle: number, points: Point[], cX: number, cY: number): Point[];
-export declare let shiftPoint: (point: Point, length: number, angle: number) => Point;
+export declare function shiftPoint(point: Point, length: number, angle: number): Point;
 export declare function contains(r1: Rect, r2: Rect): boolean;
 export declare function getViewBox(point: Point, viewBox: Rect, heightWidthRatio: number, zoomIn: boolean): Rect;
 export declare function getAngle(centerPoint: Point, startPoint: Point, endPoint: Point): number;
@@ -79,6 +79,7 @@ export declare function lineRectangleIntersections(line: Line, rect: Rect): Poin
 export declare function lineCenter(p1: Point, p2: Point): Point;
 export declare function triangleArea(p1: Point, p2: Point, p3: Point): number;
 export declare function pointInsideRectangle(p: Point, rect: Rect): Point;
+export declare function pointInsidePolygon(point: Point, polygon: Point[], excludeBounds?: boolean): boolean;
 /**
  *
  * @param p point
@@ -93,6 +94,8 @@ export declare function pointInsideRectangleUnrotated(p: Point, rect: Rect): boo
  * @returns
  */
 export declare function rectangleInsideRectangleUnrotated(rect1: Rect, rect2: Rect): boolean;
-export declare function calculateBoundsRect(points: Point[]): Rect;
+export declare function сentroid(points: Point[]): Point;
+export declare function calculateBoundsRect(pts: Point[]): Rect;
+export declare function intersectPolygons(points: Point[], polygon: Point[]): boolean;
 export declare function getLUT(points: Point[], steps?: number): Point[];
 export declare function toD(points: Point[]): string;
