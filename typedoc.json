@@ -1,5 +1,8 @@
 {
     "$schema": "https://typedoc.org/schema.json",
-    "entryPoints": ["./src/index.ts", "./src/rectInPolygon.ts", "./src/earcut.ts"],
-    "out": "docs"
+    "entryPointStrategy": "expand",
+    "entryPoints": ["./src/"],
+    "readme": "README.md",
+    "out": "docs",
+    "sort": ["source-order"]
 }

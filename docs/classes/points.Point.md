@@ -1,19 +1,19 @@
-[Simple geometry](../README.md) / [Modules](../modules.md) / [index](../modules/index.md) / Point
+[Simple geometry](../README.md) / [Exports](../modules.md) / [points](../modules/points.md) / Point
 
 # Class: Point
 
-[index](../modules/index.md).Point
+[points](../modules/points.md).Point
 
 ## Table of contents
 
 ### Constructors
 
-- [constructor](index.Point.md#constructor)
+- [constructor](points.Point.md#constructor)
 
 ### Properties
 
-- [x](index.Point.md#x)
-- [y](index.Point.md#y)
+- [x](points.Point.md#x)
+- [y](points.Point.md#y)
 
 ## Constructors
 
@@ -30,7 +30,7 @@
 
 #### Defined in
 
-[index.ts:2](https://github.com/RodionNikolaev/simple-geometry/blob/88bb558/src/index.ts#L2)
+points.ts:2
 
 ## Properties
 

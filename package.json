@@ -1,19 +1,20 @@
 {
     "name": "simple-geometry",
-    "version": "1.0.11",
+    "version": "1.0.12",
     "description": "Simple geometry",
-    "main": "dist/index.js",
-    "types": "dist/index.d.ts",
+    "main": "dist/points.js",
+    "types": "dist/points.d.ts",
     "keywords": [
         "2D geometry",
         "point",
         "line",
-        "transformations"
+        "transformations",
+        "svg paths"
     ],
     "scripts": {
-        "build": "tsc && uglifyjs dist/index.js -o dist/index.js && typedoc --plugin typedoc-plugin-markdown --name \"Simple geometry\" -options typedoc.json",
+        "build": "tsc && minify-all-js dist/ && typedoc --plugin typedoc-plugin-markdown --name \"Simple geometry\" -options typedoc.json",
         "test": "mocha -r ts-node/register tests/**.ts",
-        "dev-run":"ts-node dev/index.ts"
+        "dev-run": "ts-node dev/points.ts"
     },
     "author": "Rodion Nikolaev",
     "homepage": "https://github.com/RodionNikolaev/simple-geometry",
@@ -22,15 +23,20 @@
         "url": "https://github.com/RodionNikolaev/simple-geometry"
     },
     "license": "ISC",
+    "dependencies": {
+        "bezier-js": "6.1.4",
+        "svgpath": "2.6.0"
+    },
     "devDependencies": {
         "@types/chai": "4.3.0",
         "@types/mocha": "9.1.0",
+        "@types/node": "^20.9.3",
         "chai": "4.3.4",
         "mocha": "9.2.0",
         "ts-node": "10.4.0",
         "typedoc": "0.22.11",
         "typedoc-plugin-markdown": "3.11.12",
         "typescript": "4.5.5",
-        "uglify-js": "3.15.0"
+        "minify-all-js": "^0.1.9"
     }
 }

@@ -13,8 +13,13 @@ import {
     pointsCenter,
     shiftPoint,
     сentroid,
-} from "./index";
+} from "./points";
 
+/**
+ * Creates an inscribed rectangle inside the polygon
+ * @param points polygon points
+ * @returns rectange points
+ */
 export function getRectForPolygon(points: Point[]): Point[] {
 
     const result = centroidRect(points);

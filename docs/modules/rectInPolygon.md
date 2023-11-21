@@ -1,4 +1,4 @@
-[Simple geometry](../README.md) / [Modules](../modules.md) / rectInPolygon
+[Simple geometry](../README.md) / [Exports](../modules.md) / rectInPolygon
 
 # Module: rectInPolygon
 
@@ -12,18 +12,22 @@
 
 ### getRectForPolygon
 
-▸ **getRectForPolygon**(`points`): [`Point`](../classes/index.Point.md)[]
+▸ **getRectForPolygon**(`points`): [`Point`](../classes/points.Point.md)[]
+
+Creates an inscribed rectangle inside the polygon
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `points` | [`Point`](../classes/index.Point.md)[] |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `points` | [`Point`](../classes/points.Point.md)[] | polygon points |
 
 #### Returns
 
-[`Point`](../classes/index.Point.md)[]
+[`Point`](../classes/points.Point.md)[]
+
+rectange points
 
 #### Defined in
 
-rectInPolygon.ts:18
+[rectInPolygon.ts:23](https://github.com/RodionNikolaev/simple-geometry/blob/90f3b16/src/rectInPolygon.ts#L23)

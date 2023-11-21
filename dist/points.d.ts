@@ -31,7 +31,8 @@ export declare enum BasePoint {
     BottomRight = 0,
     Bottom = 1,
     BottomLeft = 2,
-    Left = 3
+    Left = 3,
+    Center = 8
 }
 /**
  * Round value to the number of gecimal digits
@@ -97,5 +98,3 @@ export declare function rectangleInsideRectangleUnrotated(rect1: Rect, rect2: Re
 export declare function сentroid(points: Point[]): Point;
 export declare function calculateBoundsRect(pts: Point[]): Rect;
 export declare function intersectPolygons(points: Point[], polygon: Point[]): boolean;
-export declare function getLUT(points: Point[], steps?: number): Point[];
-export declare function toD(points: Point[]): string;

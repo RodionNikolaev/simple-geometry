@@ -1,4 +1,4 @@
-[Simple geometry](../README.md) / [Modules](../modules.md) / earcut
+[Simple geometry](../README.md) / [Exports](../modules.md) / earcut
 
 # Module: earcut
 
@@ -28,4 +28,4 @@
 
 #### Defined in
 
-[earcut.ts:18](https://github.com/RodionNikolaev/simple-geometry/blob/88bb558/src/earcut.ts#L18)
+[earcut.ts:18](https://github.com/RodionNikolaev/simple-geometry/blob/90f3b16/src/earcut.ts#L18)

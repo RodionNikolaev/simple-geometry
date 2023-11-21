@@ -1,4 +1,4 @@
-[Simple geometry](README.md) / Modules
+[Simple geometry](README.md) / Exports
 
 # Simple geometry
 
@@ -7,5 +7,6 @@
 ### Modules
 
 - [earcut](modules/earcut.md)
-- [index](modules/index.md)
+- [pathPoints](modules/pathPoints.md)
+- [points](modules/points.md)
 - [rectInPolygon](modules/rectInPolygon.md)
