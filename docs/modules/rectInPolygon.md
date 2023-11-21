@@ -6,28 +6,66 @@
 
 ### Functions
 
-- [getRectForPolygon](rectInPolygon.md#getrectforpolygon)
+- [controlPoints](rectInPolygon.md#controlpoints)
+- [gGetRect](rectInPolygon.md#ggetrect)
+- [centroidRect](rectInPolygon.md#centroidrect)
 
 ## Functions
 
-### getRectForPolygon
+### controlPoints
 
-▸ **getRectForPolygon**(`points`): [`Point`](../classes/points.Point.md)[]
-
-Creates an inscribed rectangle inside the polygon
+▸ **controlPoints**(`points`): [`Point`](../classes/points.Point.md)[]
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `points` | [`Point`](../classes/points.Point.md)[] | polygon points |
+| Name | Type |
+| :------ | :------ |
+| `points` | [`Point`](../classes/points.Point.md)[] |
 
 #### Returns
 
 [`Point`](../classes/points.Point.md)[]
 
-rectange points
+#### Defined in
+
+[rectInPolygon.ts:18](https://github.com/RodionNikolaev/simple-geometry/blob/42813f0/src/rectInPolygon.ts#L18)
+
+___
+
+### gGetRect
+
+▸ **gGetRect**(`points`): [`Point`](../classes/points.Point.md)[]
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `points` | [`Point`](../classes/points.Point.md)[] |
+
+#### Returns
+
+[`Point`](../classes/points.Point.md)[]
 
 #### Defined in
 
-[rectInPolygon.ts:23](https://github.com/RodionNikolaev/simple-geometry/blob/90f3b16/src/rectInPolygon.ts#L23)
+[rectInPolygon.ts:82](https://github.com/RodionNikolaev/simple-geometry/blob/42813f0/src/rectInPolygon.ts#L82)
+
+___
+
+### centroidRect
+
+▸ **centroidRect**(`points`): [`Point`](../classes/points.Point.md)[]
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `points` | [`Point`](../classes/points.Point.md)[] |
+
+#### Returns
+
+[`Point`](../classes/points.Point.md)[]
+
+#### Defined in
+
+[rectInPolygon.ts:123](https://github.com/RodionNikolaev/simple-geometry/blob/42813f0/src/rectInPolygon.ts#L123)

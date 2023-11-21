@@ -9,6 +9,7 @@
 - [Point](../classes/points.Point.md)
 - [Line](../classes/points.Line.md)
 - [Rect](../classes/points.Rect.md)
+- [PathPoint](../classes/points.PathPoint.md)
 
 ### Enumerations
 
@@ -48,6 +49,14 @@
 - [сentroid](points.md#сentroid)
 - [calculateBoundsRect](points.md#calculateboundsrect)
 - [intersectPolygons](points.md#intersectpolygons)
+- [getRectForPolygon](points.md#getrectforpolygon)
+- [addPathPoint](points.md#addpathpoint)
+- [splitPath](points.md#splitpath)
+- [removePathPoint](points.md#removepathpoint)
+- [splitPolygon](points.md#splitpolygon)
+- [linerizePolygon](points.md#linerizepolygon)
+- [pathStringToPathPoints](points.md#pathstringtopathpoints)
+- [getLUT](points.md#getlut)
 
 ### Interfaces
 
@@ -76,7 +85,7 @@ Rounded value
 
 #### Defined in
 
-points.ts:60
+[points.ts:66](https://github.com/RodionNikolaev/simple-geometry/blob/42813f0/src/points.ts#L66)
 
 ___
 
@@ -97,7 +106,7 @@ ___
 
 #### Defined in
 
-points.ts:67
+[points.ts:73](https://github.com/RodionNikolaev/simple-geometry/blob/42813f0/src/points.ts#L73)
 
 ___
 
@@ -121,7 +130,7 @@ ___
 
 #### Defined in
 
-points.ts:71
+[points.ts:77](https://github.com/RodionNikolaev/simple-geometry/blob/42813f0/src/points.ts#L77)
 
 ___
 
@@ -143,7 +152,7 @@ ___
 
 #### Defined in
 
-points.ts:106
+[points.ts:112](https://github.com/RodionNikolaev/simple-geometry/blob/42813f0/src/points.ts#L112)
 
 ___
 
@@ -166,7 +175,7 @@ ___
 
 #### Defined in
 
-points.ts:110
+[points.ts:116](https://github.com/RodionNikolaev/simple-geometry/blob/42813f0/src/points.ts#L116)
 
 ___
 
@@ -189,7 +198,7 @@ ___
 
 #### Defined in
 
-points.ts:118
+[points.ts:124](https://github.com/RodionNikolaev/simple-geometry/blob/42813f0/src/points.ts#L124)
 
 ___
 
@@ -211,7 +220,7 @@ ___
 
 #### Defined in
 
-points.ts:122
+[points.ts:128](https://github.com/RodionNikolaev/simple-geometry/blob/42813f0/src/points.ts#L128)
 
 ___
 
@@ -232,7 +241,7 @@ ___
 
 #### Defined in
 
-points.ts:129
+[points.ts:135](https://github.com/RodionNikolaev/simple-geometry/blob/42813f0/src/points.ts#L135)
 
 ___
 
@@ -255,7 +264,7 @@ ___
 
 #### Defined in
 
-points.ts:133
+[points.ts:139](https://github.com/RodionNikolaev/simple-geometry/blob/42813f0/src/points.ts#L139)
 
 ___
 
@@ -277,7 +286,7 @@ ___
 
 #### Defined in
 
-points.ts:148
+[points.ts:154](https://github.com/RodionNikolaev/simple-geometry/blob/42813f0/src/points.ts#L154)
 
 ___
 
@@ -298,7 +307,7 @@ ___
 
 #### Defined in
 
-points.ts:159
+[points.ts:165](https://github.com/RodionNikolaev/simple-geometry/blob/42813f0/src/points.ts#L165)
 
 ___
 
@@ -319,7 +328,7 @@ ___
 
 #### Defined in
 
-points.ts:172
+[points.ts:178](https://github.com/RodionNikolaev/simple-geometry/blob/42813f0/src/points.ts#L178)
 
 ___
 
@@ -341,7 +350,7 @@ ___
 
 #### Defined in
 
-points.ts:176
+[points.ts:182](https://github.com/RodionNikolaev/simple-geometry/blob/42813f0/src/points.ts#L182)
 
 ___
 
@@ -362,7 +371,7 @@ ___
 
 #### Defined in
 
-points.ts:184
+[points.ts:190](https://github.com/RodionNikolaev/simple-geometry/blob/42813f0/src/points.ts#L190)
 
 ___
 
@@ -385,7 +394,7 @@ ___
 
 #### Defined in
 
-points.ts:188
+[points.ts:194](https://github.com/RodionNikolaev/simple-geometry/blob/42813f0/src/points.ts#L194)
 
 ___
 
@@ -407,7 +416,7 @@ ___
 
 #### Defined in
 
-points.ts:192
+[points.ts:198](https://github.com/RodionNikolaev/simple-geometry/blob/42813f0/src/points.ts#L198)
 
 ___
 
@@ -434,7 +443,7 @@ ___
 
 #### Defined in
 
-points.ts:196
+[points.ts:202](https://github.com/RodionNikolaev/simple-geometry/blob/42813f0/src/points.ts#L202)
 
 ___
 
@@ -455,7 +464,7 @@ ___
 
 #### Defined in
 
-points.ts:213
+[points.ts:219](https://github.com/RodionNikolaev/simple-geometry/blob/42813f0/src/points.ts#L219)
 
 ___
 
@@ -480,7 +489,7 @@ ___
 
 #### Defined in
 
-points.ts:217
+[points.ts:223](https://github.com/RodionNikolaev/simple-geometry/blob/42813f0/src/points.ts#L223)
 
 ___
 
@@ -502,7 +511,7 @@ ___
 
 #### Defined in
 
-points.ts:227
+[points.ts:233](https://github.com/RodionNikolaev/simple-geometry/blob/42813f0/src/points.ts#L233)
 
 ___
 
@@ -530,7 +539,7 @@ ___
 
 #### Defined in
 
-points.ts:241
+[points.ts:247](https://github.com/RodionNikolaev/simple-geometry/blob/42813f0/src/points.ts#L247)
 
 ___
 
@@ -552,7 +561,7 @@ ___
 
 #### Defined in
 
-points.ts:291
+[points.ts:297](https://github.com/RodionNikolaev/simple-geometry/blob/42813f0/src/points.ts#L297)
 
 ___
 
@@ -573,7 +582,7 @@ ___
 
 #### Defined in
 
-points.ts:299
+[points.ts:305](https://github.com/RodionNikolaev/simple-geometry/blob/42813f0/src/points.ts#L305)
 
 ___
 
@@ -594,7 +603,7 @@ ___
 
 #### Defined in
 
-points.ts:317
+[points.ts:323](https://github.com/RodionNikolaev/simple-geometry/blob/42813f0/src/points.ts#L323)
 
 ___
 
@@ -616,7 +625,7 @@ ___
 
 #### Defined in
 
-points.ts:321
+[points.ts:327](https://github.com/RodionNikolaev/simple-geometry/blob/42813f0/src/points.ts#L327)
 
 ___
 
@@ -637,7 +646,7 @@ ___
 
 #### Defined in
 
-points.ts:325
+[points.ts:331](https://github.com/RodionNikolaev/simple-geometry/blob/42813f0/src/points.ts#L331)
 
 ___
 
@@ -659,7 +668,7 @@ ___
 
 #### Defined in
 
-points.ts:336
+[points.ts:342](https://github.com/RodionNikolaev/simple-geometry/blob/42813f0/src/points.ts#L342)
 
 ___
 
@@ -680,7 +689,7 @@ ___
 
 #### Defined in
 
-points.ts:362
+[points.ts:368](https://github.com/RodionNikolaev/simple-geometry/blob/42813f0/src/points.ts#L368)
 
 ___
 
@@ -703,7 +712,7 @@ Detect smaller unrotated rectangle inside the bigger unrotated rectangle
 
 #### Defined in
 
-points.ts:372
+[points.ts:378](https://github.com/RodionNikolaev/simple-geometry/blob/42813f0/src/points.ts#L378)
 
 ___
 
@@ -723,7 +732,7 @@ ___
 
 #### Defined in
 
-points.ts:381
+[points.ts:387](https://github.com/RodionNikolaev/simple-geometry/blob/42813f0/src/points.ts#L387)
 
 ___
 
@@ -743,7 +752,7 @@ ___
 
 #### Defined in
 
-points.ts:399
+[points.ts:405](https://github.com/RodionNikolaev/simple-geometry/blob/42813f0/src/points.ts#L405)
 
 ___
 
@@ -764,4 +773,179 @@ ___
 
 #### Defined in
 
-points.ts:413
+[points.ts:419](https://github.com/RodionNikolaev/simple-geometry/blob/42813f0/src/points.ts#L419)
+
+___
+
+### getRectForPolygon
+
+▸ **getRectForPolygon**(`points`): [`Point`](../classes/points.Point.md)[]
+
+Creates an inscribed rectangle inside the polygon
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `points` | [`Point`](../classes/points.Point.md)[] | polygon points |
+
+#### Returns
+
+[`Point`](../classes/points.Point.md)[]
+
+rectange points
+
+#### Defined in
+
+[points.ts:444](https://github.com/RodionNikolaev/simple-geometry/blob/42813f0/src/points.ts#L444)
+
+___
+
+### addPathPoint
+
+▸ **addPathPoint**(`pathPoints`, `clickPoint`, `isCurved`): [`PathPoint`](../classes/points.PathPoint.md)[]
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `pathPoints` | [`PathPoint`](../classes/points.PathPoint.md)[] |
+| `clickPoint` | [`Point`](../classes/points.Point.md) |
+| `isCurved` | `boolean` |
+
+#### Returns
+
+[`PathPoint`](../classes/points.PathPoint.md)[]
+
+#### Defined in
+
+[points.ts:464](https://github.com/RodionNikolaev/simple-geometry/blob/42813f0/src/points.ts#L464)
+
+___
+
+### splitPath
+
+▸ **splitPath**(`pathPoints`, `clickPoint`): [`PathPoint`](../classes/points.PathPoint.md)[]
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `pathPoints` | [`PathPoint`](../classes/points.PathPoint.md)[] |
+| `clickPoint` | [`Point`](../classes/points.Point.md) |
+
+#### Returns
+
+[`PathPoint`](../classes/points.PathPoint.md)[]
+
+#### Defined in
+
+[points.ts:498](https://github.com/RodionNikolaev/simple-geometry/blob/42813f0/src/points.ts#L498)
+
+___
+
+### removePathPoint
+
+▸ **removePathPoint**(`pathPoints`, `pointIndex`, `code`): [`PathPoint`](../classes/points.PathPoint.md)[]
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `pathPoints` | [`PathPoint`](../classes/points.PathPoint.md)[] |
+| `pointIndex` | `number` |
+| `code` | ``"point"`` \| ``"cp1"`` \| ``"cp2"`` |
+
+#### Returns
+
+[`PathPoint`](../classes/points.PathPoint.md)[]
+
+#### Defined in
+
+[points.ts:521](https://github.com/RodionNikolaev/simple-geometry/blob/42813f0/src/points.ts#L521)
+
+___
+
+### splitPolygon
+
+▸ **splitPolygon**(`pathPoints`, `p0`, `p1`): [`PathPoint`](../classes/points.PathPoint.md)[]
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `pathPoints` | [`PathPoint`](../classes/points.PathPoint.md)[] |
+| `p0` | [`Point`](../classes/points.Point.md) |
+| `p1` | [`Point`](../classes/points.Point.md) |
+
+#### Returns
+
+[`PathPoint`](../classes/points.PathPoint.md)[]
+
+#### Defined in
+
+[points.ts:534](https://github.com/RodionNikolaev/simple-geometry/blob/42813f0/src/points.ts#L534)
+
+___
+
+### linerizePolygon
+
+▸ **linerizePolygon**(`pathPoints`): [`Point`](../classes/points.Point.md)[][]
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `pathPoints` | [`PathPoint`](../classes/points.PathPoint.md)[] |
+
+#### Returns
+
+[`Point`](../classes/points.Point.md)[][]
+
+#### Defined in
+
+[points.ts:560](https://github.com/RodionNikolaev/simple-geometry/blob/42813f0/src/points.ts#L560)
+
+___
+
+### pathStringToPathPoints
+
+▸ **pathStringToPathPoints**(`d`, `t?`): [`PathPoint`](../classes/points.PathPoint.md)[]
+
+#### Parameters
+
+| Name | Type | Default value |
+| :------ | :------ | :------ |
+| `d` | `string` | `undefined` |
+| `t` | `string` | `null` |
+
+#### Returns
+
+[`PathPoint`](../classes/points.PathPoint.md)[]
+
+#### Defined in
+
+[points.ts:589](https://github.com/RodionNikolaev/simple-geometry/blob/42813f0/src/points.ts#L589)
+
+___
+
+### getLUT
+
+▸ **getLUT**(`points`, `steps?`): [`Point`](../classes/points.Point.md)[]
+
+Generates a LookUp Table of coordinates on the curve
+
+#### Parameters
+
+| Name | Type | Default value | Description |
+| :------ | :------ | :------ | :------ |
+| `points` | [`Point`](../classes/points.Point.md)[] | `undefined` | point, cp1, [cp2], point |
+| `steps` | `number` | `100` |  |
+
+#### Returns
+
+[`Point`](../classes/points.Point.md)[]
+
+#### Defined in
+
+[points.ts:843](https://github.com/RodionNikolaev/simple-geometry/blob/42813f0/src/points.ts#L843)

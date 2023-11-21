@@ -52,7 +52,7 @@
 
 #### Defined in
 
-points.ts:12
+[points.ts:17](https://github.com/RodionNikolaev/simple-geometry/blob/42813f0/src/points.ts#L17)
 
 ___
 
@@ -66,7 +66,7 @@ ___
 
 #### Defined in
 
-points.ts:32
+[points.ts:37](https://github.com/RodionNikolaev/simple-geometry/blob/42813f0/src/points.ts#L37)
 
 ## Constructors
 
@@ -85,7 +85,7 @@ points.ts:32
 
 #### Defined in
 
-points.ts:10
+[points.ts:15](https://github.com/RodionNikolaev/simple-geometry/blob/42813f0/src/points.ts#L15)
 
 ## Properties
 
@@ -123,7 +123,7 @@ ___
 
 #### Defined in
 
-points.ts:16
+[points.ts:21](https://github.com/RodionNikolaev/simple-geometry/blob/42813f0/src/points.ts#L21)
 
 ___
 
@@ -137,7 +137,7 @@ ___
 
 #### Defined in
 
-points.ts:20
+[points.ts:25](https://github.com/RodionNikolaev/simple-geometry/blob/42813f0/src/points.ts#L25)
 
 ___
 
@@ -151,7 +151,7 @@ ___
 
 #### Defined in
 
-points.ts:24
+[points.ts:29](https://github.com/RodionNikolaev/simple-geometry/blob/42813f0/src/points.ts#L29)
 
 ___
 
@@ -165,7 +165,7 @@ ___
 
 #### Defined in
 
-points.ts:28
+[points.ts:33](https://github.com/RodionNikolaev/simple-geometry/blob/42813f0/src/points.ts#L33)
 
 ___
 
@@ -179,7 +179,7 @@ ___
 
 #### Defined in
 
-points.ts:35
+[points.ts:40](https://github.com/RodionNikolaev/simple-geometry/blob/42813f0/src/points.ts#L40)
 
 ___
 
@@ -193,4 +193,4 @@ ___
 
 #### Defined in
 
-points.ts:38
+[points.ts:43](https://github.com/RodionNikolaev/simple-geometry/blob/42813f0/src/points.ts#L43)

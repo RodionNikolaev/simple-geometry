@@ -15,26 +15,7 @@ import {
     сentroid,
 } from "./points";
 
-/**
- * Creates an inscribed rectangle inside the polygon
- * @param points polygon points
- * @returns rectange points
- */
-export function getRectForPolygon(points: Point[]): Point[] {
-
-    const result = centroidRect(points);
-
-    if (result == null) {
-        var pts = points.map((p) => new Point(Math.round(p.x), Math.round(p.y)));
-        var _controlPoints = controlPoints(pts);
-
-        return gGetRect(_controlPoints);
-    }
-
-    return result;
-}
-
-function controlPoints(points: Point[]): Point[] {
+export function controlPoints(points: Point[]): Point[] {
     var newPoints: [number, Point][] = [];
 
     let addnewPoint = (index: number, point: Point) => {
@@ -98,11 +79,7 @@ function controlPoints(points: Point[]): Point[] {
     return allPoints;
 }
 
-function samePoint(p1: Point, p2: Point, minDistance: number = 1) {
-    return lineLength(p1, p2) <= minDistance;
-}
-
-function gGetRect(points: Point[]): Point[] {
+export function gGetRect(points: Point[]): Point[] {
     var area = 0;
     var rect: Point[] = [];
 
@@ -143,26 +120,7 @@ function gGetRect(points: Point[]): Point[] {
     return rect;
 }
 
-function rectArea(points: Point[]): number {
-    return isRect(points) ? lineLength(points[0], points[1]) * lineLength(points[1], points[2]) : 0;
-}
-
-function isRect(points: Point[]): boolean {
-    if (points.length != 5 && points.length != 4) return false;
-
-    var first = points[0];
-    var second = points[1];
-    var third = points[2];
-    var fourth = points[3];
-
-    return (
-        Math.round(Math.abs(lineAngle(first, second) - lineAngle(second, third))) % 90 == 0 &&
-        Math.abs(lineLength(first, second) - lineLength(third, fourth)) < 2 &&
-        Math.abs(lineLength(second, third) - lineLength(fourth, first)) < 2
-    );
-}
-
-function centroidRect(points: Point[]): Point[] {
+export function centroidRect(points: Point[]): Point[] {
     var center = сentroid(points);
 
     if (!pointInsidePolygon(center, points)) return null;
@@ -211,6 +169,29 @@ function centroidRect(points: Point[]): Point[] {
 
     if (maxPoints == null) return null;
     return maxPoints;
+}
+
+function samePoint(p1: Point, p2: Point, minDistance: number = 1) {
+    return lineLength(p1, p2) <= minDistance;
+}
+
+function rectArea(points: Point[]): number {
+    return isRect(points) ? lineLength(points[0], points[1]) * lineLength(points[1], points[2]) : 0;
+}
+
+function isRect(points: Point[]): boolean {
+    if (points.length != 5 && points.length != 4) return false;
+
+    var first = points[0];
+    var second = points[1];
+    var third = points[2];
+    var fourth = points[3];
+
+    return (
+        Math.round(Math.abs(lineAngle(first, second) - lineAngle(second, third))) % 90 == 0 &&
+        Math.abs(lineLength(first, second) - lineLength(third, fourth)) < 2 &&
+        Math.abs(lineLength(second, third) - lineLength(fourth, first)) < 2
+    );
 }
 
 function nearestIntersection(p0: Point, p1: Point, points: Point[]): number {

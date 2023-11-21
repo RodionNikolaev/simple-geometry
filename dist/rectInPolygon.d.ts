@@ -1,7 +1,4 @@
 import { Point } from "./points";
-/**
- * Creates an inscribed rectangle inside the polygon
- * @param points polygon points
- * @returns rectange points
- */
-export declare function getRectForPolygon(points: Point[]): Point[];
+export declare function controlPoints(points: Point[]): Point[];
+export declare function gGetRect(points: Point[]): Point[];
+export declare function centroidRect(points: Point[]): Point[];

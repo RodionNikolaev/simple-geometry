@@ -3,7 +3,7 @@
     "version": "1.0.12",
     "description": "Simple geometry",
     "main": "dist/points.js",
-    "types": "dist/points.d.ts",
+    "types": "dist/*.d.ts",
     "keywords": [
         "2D geometry",
         "point",
