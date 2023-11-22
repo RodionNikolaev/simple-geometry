@@ -1,22 +1,22 @@
-[Simple geometry](../README.md) / [Exports](../modules.md) / [points](../modules/points.md) / PathPoint
+[Simple geometry](../README.md) / [Exports](../modules.md) / [pathPoints](../modules/pathPoints.md) / PathPoint
 
 # Class: PathPoint
 
-[points](../modules/points.md).PathPoint
+[pathPoints](../modules/pathPoints.md).PathPoint
 
 ## Table of contents
 
 ### Constructors
 
-- [constructor](points.PathPoint.md#constructor)
+- [constructor](pathPoints.PathPoint.md#constructor)
 
 ### Properties
 
-- [code](points.PathPoint.md#code)
-- [point](points.PathPoint.md#point)
-- [cp1](points.PathPoint.md#cp1)
-- [cp2](points.PathPoint.md#cp2)
-- [isVisible](points.PathPoint.md#isvisible)
+- [code](pathPoints.PathPoint.md#code)
+- [point](pathPoints.PathPoint.md#point)
+- [cp1](pathPoints.PathPoint.md#cp1)
+- [cp2](pathPoints.PathPoint.md#cp2)
+- [isVisible](pathPoints.PathPoint.md#isvisible)
 
 ## Constructors
 
@@ -35,7 +35,7 @@
 
 #### Defined in
 
-[points.ts:460](https://github.com/RodionNikolaev/simple-geometry/blob/42813f0/src/points.ts#L460)
+pathPoints.ts:7
 
 ## Properties
 
@@ -69,4 +69,4 @@ ___
 
 #### Defined in
 
-[points.ts:461](https://github.com/RodionNikolaev/simple-geometry/blob/42813f0/src/points.ts#L461)
+pathPoints.ts:8

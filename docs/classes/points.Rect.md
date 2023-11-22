@@ -52,7 +52,7 @@
 
 #### Defined in
 
-[points.ts:17](https://github.com/RodionNikolaev/simple-geometry/blob/42813f0/src/points.ts#L17)
+[points.ts:15](https://github.com/RodionNikolaev/simple-geometry/blob/7b9e862/src/points.ts#L15)
 
 ___
 
@@ -66,7 +66,7 @@ ___
 
 #### Defined in
 
-[points.ts:37](https://github.com/RodionNikolaev/simple-geometry/blob/42813f0/src/points.ts#L37)
+[points.ts:35](https://github.com/RodionNikolaev/simple-geometry/blob/7b9e862/src/points.ts#L35)
 
 ## Constructors
 
@@ -85,7 +85,7 @@ ___
 
 #### Defined in
 
-[points.ts:15](https://github.com/RodionNikolaev/simple-geometry/blob/42813f0/src/points.ts#L15)
+[points.ts:13](https://github.com/RodionNikolaev/simple-geometry/blob/7b9e862/src/points.ts#L13)
 
 ## Properties
 
@@ -123,7 +123,7 @@ ___
 
 #### Defined in
 
-[points.ts:21](https://github.com/RodionNikolaev/simple-geometry/blob/42813f0/src/points.ts#L21)
+[points.ts:19](https://github.com/RodionNikolaev/simple-geometry/blob/7b9e862/src/points.ts#L19)
 
 ___
 
@@ -137,7 +137,7 @@ ___
 
 #### Defined in
 
-[points.ts:25](https://github.com/RodionNikolaev/simple-geometry/blob/42813f0/src/points.ts#L25)
+[points.ts:23](https://github.com/RodionNikolaev/simple-geometry/blob/7b9e862/src/points.ts#L23)
 
 ___
 
@@ -151,7 +151,7 @@ ___
 
 #### Defined in
 
-[points.ts:29](https://github.com/RodionNikolaev/simple-geometry/blob/42813f0/src/points.ts#L29)
+[points.ts:27](https://github.com/RodionNikolaev/simple-geometry/blob/7b9e862/src/points.ts#L27)
 
 ___
 
@@ -165,7 +165,7 @@ ___
 
 #### Defined in
 
-[points.ts:33](https://github.com/RodionNikolaev/simple-geometry/blob/42813f0/src/points.ts#L33)
+[points.ts:31](https://github.com/RodionNikolaev/simple-geometry/blob/7b9e862/src/points.ts#L31)
 
 ___
 
@@ -179,7 +179,7 @@ ___
 
 #### Defined in
 
-[points.ts:40](https://github.com/RodionNikolaev/simple-geometry/blob/42813f0/src/points.ts#L40)
+[points.ts:38](https://github.com/RodionNikolaev/simple-geometry/blob/7b9e862/src/points.ts#L38)
 
 ___
 
@@ -193,4 +193,4 @@ ___
 
 #### Defined in
 
-[points.ts:43](https://github.com/RodionNikolaev/simple-geometry/blob/42813f0/src/points.ts#L43)
+[points.ts:41](https://github.com/RodionNikolaev/simple-geometry/blob/7b9e862/src/points.ts#L41)

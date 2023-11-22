@@ -28,4 +28,4 @@
 
 #### Defined in
 
-[earcut.ts:18](https://github.com/RodionNikolaev/simple-geometry/blob/42813f0/src/earcut.ts#L18)
+[earcut.ts:18](https://github.com/RodionNikolaev/simple-geometry/blob/7b9e862/src/earcut.ts#L18)

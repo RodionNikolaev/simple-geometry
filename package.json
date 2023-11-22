@@ -1,9 +1,26 @@
 {
     "name": "simple-geometry",
-    "version": "1.0.12",
+    "version": "1.0.14",
     "description": "Simple geometry",
-    "main": "dist/points.js",
-    "types": "dist/*.d.ts",
+    "main": "dist/points.js",   
+    "exports": {
+        ".": {
+            "require": "./dist/points.js",
+            "import": "./dist/points.js"            
+        },
+        "./pathPoints": {
+            "default": "./dist/pathPoints.js",
+            "require": "./dist/pathPoints.js",
+            "import": "./dist/pathPoints.js"
+        }
+    },
+    "typesVersions": {
+        "*": {
+            "pathPoints": ["./dist/pathPoints.d.ts"],
+            "earcut": ["./dist/earcut.d.ts"],
+            "rectInPolygon": ["./dist/rectInPolygon.d.ts"]
+        }
+    },
     "keywords": [
         "2D geometry",
         "point",
