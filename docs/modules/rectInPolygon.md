@@ -28,7 +28,7 @@
 
 #### Defined in
 
-[rectInPolygon.ts:18](https://github.com/RodionNikolaev/simple-geometry/blob/7b9e862/src/rectInPolygon.ts#L18)
+[rectInPolygon.ts:18](https://github.com/RodionNikolaev/simple-geometry/blob/c83fb43/src/rectInPolygon.ts#L18)
 
 ___
 
@@ -48,7 +48,7 @@ ___
 
 #### Defined in
 
-[rectInPolygon.ts:82](https://github.com/RodionNikolaev/simple-geometry/blob/7b9e862/src/rectInPolygon.ts#L82)
+[rectInPolygon.ts:82](https://github.com/RodionNikolaev/simple-geometry/blob/c83fb43/src/rectInPolygon.ts#L82)
 
 ___
 
@@ -68,4 +68,4 @@ ___
 
 #### Defined in
 
-[rectInPolygon.ts:123](https://github.com/RodionNikolaev/simple-geometry/blob/7b9e862/src/rectInPolygon.ts#L123)
+[rectInPolygon.ts:123](https://github.com/RodionNikolaev/simple-geometry/blob/c83fb43/src/rectInPolygon.ts#L123)

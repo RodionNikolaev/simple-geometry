@@ -35,7 +35,7 @@
 
 #### Defined in
 
-pathPoints.ts:7
+[pathPoints.ts:7](https://github.com/RodionNikolaev/simple-geometry/blob/c83fb43/src/pathPoints.ts#L7)
 
 ## Properties
 
@@ -69,4 +69,4 @@ ___
 
 #### Defined in
 
-pathPoints.ts:8
+[pathPoints.ts:8](https://github.com/RodionNikolaev/simple-geometry/blob/c83fb43/src/pathPoints.ts#L8)
