@@ -1,6 +1,5 @@
 import { expect } from "chai";
-import { Point } from "../src";
-import getRectForPolygon from "../src/rectInPolygon";
+import { Point, getRectForPolygon } from "../src/points";
 
 describe("getRectForPolygon", () => {
     it("should return rect", () => {

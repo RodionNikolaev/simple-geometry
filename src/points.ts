@@ -1,6 +1,5 @@
 import { centroidRect, controlPoints, gGetRect } from "./rectInPolygon";
 
-
 export class Point {
     public constructor(public x: number = 0, public y: number = 0) {}
 }
@@ -36,7 +35,7 @@ export class Rect {
         return this.x == 0 && this.y == 0 && this.width == 0 && this.height == 0;
     }
     public get center(): Point {
-        return { x: this.x + this.width / 2, y: this.y + this.height / 2 };
+        return lineCenter(this.p0, this.p2);
     }
     public get square(): number {
         return this.width * this.height;

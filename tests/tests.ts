@@ -1,16 +1,8 @@
 import { expect } from "chai";
 import { describe, it } from "mocha";
-import {
-    calculateBoundsRect,
-    getLUT,
-    Line,
-    lineLength,
-    linesIntersection,
-    minDistanceLineEnds,
-    Point,
-    Rect,
-    round,
-} from "../src/index";
+import { Line, Point, Rect, calculateBoundsRect, lineLength, linesIntersection, minDistanceLineEnds, round } from "../src/points";
+
+import { getLUT } from "../src/pathPoints";
 
 let p0 = new Point(10, 20);
 let p1 = new Point(30, 20);

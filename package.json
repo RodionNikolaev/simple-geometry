@@ -1,17 +1,17 @@
 {
     "name": "simple-geometry",
-    "version": "1.0.14",
+    "version": "1.0.16",
     "description": "Simple geometry",
-    "main": "dist/points.js",   
+    "main": "dist/points.js",
     "exports": {
         ".": {
             "require": "./dist/points.js",
-            "import": "./dist/points.js"            
+            "import": "./dist/points.js"
         },
         "./pathPoints": {
-            "default": "./dist/pathPoints.js",
             "require": "./dist/pathPoints.js",
-            "import": "./dist/pathPoints.js"
+            "import": "./dist/pathPoints.js",
+            "default": "./dist/pathPoints.js"
         }
     },
     "typesVersions": {
