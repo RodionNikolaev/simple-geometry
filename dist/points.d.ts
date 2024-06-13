@@ -47,7 +47,7 @@ export declare function translatePoint(delta: Point, dx: number, dy: number): Po
 export declare function rotatePoint(angle: number, point: Point, cX: number, cY: number): Point;
 export declare function rotatePoints(angle: number, points: Point[], cX: number, cY: number): Point[];
 export declare function shiftPoint(point: Point, length: number, angle: number): Point;
-export declare function contains(r1: Rect, r2: Rect): boolean;
+export declare function contains(rect1: Rect, rect2: Rect): boolean;
 export declare function getViewBox(point: Point, viewBox: Rect, heightWidthRatio: number, zoomIn: boolean): Rect;
 export declare function getAngle(centerPoint: Point, startPoint: Point, endPoint: Point): number;
 export declare function lineAngle(startPoint: Point | {

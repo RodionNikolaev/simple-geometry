@@ -129,8 +129,43 @@ export function shiftPoint(point: Point, length: number, angle: number): Point {
     };
 }
 
-export function contains(r1: Rect, r2: Rect): boolean {
-    return r2.x + r2.width < r1.x + r1.width && r2.x > r1.x && r2.y > r1.y && r2.y + r2.height < r1.y + r1.height;
+export function contains(rect1: Rect, rect2: Rect) {
+    const vertices1 = getVertices(rect1);
+    const vertices2 = getVertices(rect2);
+    return vertices2.every((v) => containsPoint(v, vertices1));
+}
+
+function getVertices(rect: Rect) {
+    const { center, width, height } = rect;
+
+    const angle = lineAngle(rect.p0, rect.p1) * (Math.PI / 180);
+
+    const cosA = Math.cos(angle);
+    const sinA = Math.sin(angle);
+
+    const halfW = width / 2;
+    const halfH = height / 2;
+
+    return [
+        new Point(center.x + cosA * halfW - sinA * halfH, center.y + sinA * halfW + cosA * halfH),
+        new Point(center.x - cosA * halfW - sinA * halfH, center.y - sinA * halfW + cosA * halfH),
+        new Point(center.x - cosA * halfW + sinA * halfH, center.y - sinA * halfW - cosA * halfH),
+        new Point(center.x + cosA * halfW + sinA * halfH, center.y + sinA * halfW - cosA * halfH),
+    ];
+}
+
+function containsPoint(point: Point, vertices: Point[]) {
+    let inside = false;
+    for (let i = 0, j = vertices.length - 1; i < vertices.length; j = i++) {
+        const xi = vertices[i].x,
+            yi = vertices[i].y;
+        const xj = vertices[j].x,
+            yj = vertices[j].y;
+
+        const intersect = yi > point.y !== yj > point.y && point.x < ((xj - xi) * (point.y - yi)) / (yj - yi) + xi;
+        if (intersect) inside = !inside;
+    }
+    return inside;
 }
 
 export function getViewBox(point: Point, viewBox: Rect, heightWidthRatio: number, zoomIn: boolean): Rect {
@@ -452,11 +487,17 @@ export function getRectForPolygon(points: Point[]): Point[] {
 }
 
 export function polygonArea(points: Point[]): number {
-    var det = 0;
+    let area = 0;
+    const n = points.length;
 
-    if (points[0].x != points[points.length - 1].x && points[0].y != points[points.length - 1].y)
-        points = points.concat(points[0]);
+    for (let i = 0; i < n; i++) {
+        const x1 = points[i].x;
+        const y1 = points[i].y;
+        const x2 = points[(i + 1) % n].x;
+        const y2 = points[(i + 1) % n].y;
 
-    for (var i = 0; i < points.length - 1; i++) det += points[i].x * points[i + 1].y - points[i].y * points[i + 1].x;
-    return Math.abs(det) / 2;
+        area += x1 * y2 - x2 * y1;
+    }
+
+    return Math.abs(area / 2);
 }

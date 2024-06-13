@@ -20,7 +20,7 @@
 
 #### Defined in
 
-[points.ts:225](https://github.com/RodionNikolaev/simple-geometry/blob/c83fb43/src/points.ts#L225)
+[points.ts:260](https://github.com/RodionNikolaev/simple-geometry/blob/da1538f/src/points.ts#L260)
 
 ___
 
@@ -30,7 +30,7 @@ ___
 
 #### Defined in
 
-[points.ts:226](https://github.com/RodionNikolaev/simple-geometry/blob/c83fb43/src/points.ts#L226)
+[points.ts:261](https://github.com/RodionNikolaev/simple-geometry/blob/da1538f/src/points.ts#L261)
 
 ___
 
@@ -40,4 +40,4 @@ ___
 
 #### Defined in
 
-[points.ts:227](https://github.com/RodionNikolaev/simple-geometry/blob/c83fb43/src/points.ts#L227)
+[points.ts:262](https://github.com/RodionNikolaev/simple-geometry/blob/da1538f/src/points.ts#L262)
