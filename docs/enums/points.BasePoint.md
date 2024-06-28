@@ -26,7 +26,7 @@
 
 #### Defined in
 
-[points.ts:46](https://github.com/RodionNikolaev/simple-geometry/blob/da1538f/src/points.ts#L46)
+[points.ts:46](https://github.com/RodionNikolaev/simple-geometry/blob/fbce11c/src/points.ts#L46)
 
 ___
 
@@ -36,7 +36,7 @@ ___
 
 #### Defined in
 
-[points.ts:47](https://github.com/RodionNikolaev/simple-geometry/blob/da1538f/src/points.ts#L47)
+[points.ts:47](https://github.com/RodionNikolaev/simple-geometry/blob/fbce11c/src/points.ts#L47)
 
 ___
 
@@ -46,7 +46,7 @@ ___
 
 #### Defined in
 
-[points.ts:48](https://github.com/RodionNikolaev/simple-geometry/blob/da1538f/src/points.ts#L48)
+[points.ts:48](https://github.com/RodionNikolaev/simple-geometry/blob/fbce11c/src/points.ts#L48)
 
 ___
 
@@ -56,7 +56,7 @@ ___
 
 #### Defined in
 
-[points.ts:49](https://github.com/RodionNikolaev/simple-geometry/blob/da1538f/src/points.ts#L49)
+[points.ts:49](https://github.com/RodionNikolaev/simple-geometry/blob/fbce11c/src/points.ts#L49)
 
 ___
 
@@ -66,7 +66,7 @@ ___
 
 #### Defined in
 
-[points.ts:50](https://github.com/RodionNikolaev/simple-geometry/blob/da1538f/src/points.ts#L50)
+[points.ts:50](https://github.com/RodionNikolaev/simple-geometry/blob/fbce11c/src/points.ts#L50)
 
 ___
 
@@ -76,7 +76,7 @@ ___
 
 #### Defined in
 
-[points.ts:51](https://github.com/RodionNikolaev/simple-geometry/blob/da1538f/src/points.ts#L51)
+[points.ts:51](https://github.com/RodionNikolaev/simple-geometry/blob/fbce11c/src/points.ts#L51)
 
 ___
 
@@ -86,7 +86,7 @@ ___
 
 #### Defined in
 
-[points.ts:52](https://github.com/RodionNikolaev/simple-geometry/blob/da1538f/src/points.ts#L52)
+[points.ts:52](https://github.com/RodionNikolaev/simple-geometry/blob/fbce11c/src/points.ts#L52)
 
 ___
 
@@ -96,7 +96,7 @@ ___
 
 #### Defined in
 
-[points.ts:53](https://github.com/RodionNikolaev/simple-geometry/blob/da1538f/src/points.ts#L53)
+[points.ts:53](https://github.com/RodionNikolaev/simple-geometry/blob/fbce11c/src/points.ts#L53)
 
 ___
 
@@ -106,4 +106,4 @@ ___
 
 #### Defined in
 
-[points.ts:54](https://github.com/RodionNikolaev/simple-geometry/blob/da1538f/src/points.ts#L54)
+[points.ts:54](https://github.com/RodionNikolaev/simple-geometry/blob/fbce11c/src/points.ts#L54)

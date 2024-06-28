@@ -204,7 +204,7 @@ export function lineAngle(startPoint: Point | { x: number; y: number }, endPoint
 
     let direction = getDirection(startPoint, p1, endPoint);
 
-    return direction * round((Math.acos(cos > 1 ? 1 : cos) * 180) / Math.PI, 3);
+    return direction * round((Math.acos(cos > 1 ? 1 : cos) * 180) / Math.PI, 3) || 0;
 }
 
 export function pointsCenter(startPoint: Point, endPoint: Point) {
