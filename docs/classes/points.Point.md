@@ -30,7 +30,7 @@
 
 #### Defined in
 
-[points.ts:4](https://github.com/RodionNikolaev/simple-geometry/blob/fbce11c/src/points.ts#L4)
+[points.ts:4](https://github.com/RodionNikolaev/simple-geometry/blob/4651fb4/src/points.ts#L4)
 
 ## Properties
 

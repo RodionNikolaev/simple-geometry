@@ -40,7 +40,7 @@ export declare enum BasePoint {
  * @param digits Number decimal digits
  * @returns Rounded value
  */
-export declare function round(value: any, digits?: number): any;
+export declare function round(value: number, digits?: number): any;
 export declare function roundPoint(point: Point, digits: number): Point;
 export declare function scalePoint(p: Point, dx: number, dy: number, boundingRect: Rect, basePoint: BasePoint): Point;
 export declare function translatePoint(delta: Point, dx: number, dy: number): Point;

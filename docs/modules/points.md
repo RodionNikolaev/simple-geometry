@@ -67,7 +67,7 @@ Round value to the number of gecimal digits
 
 | Name | Type | Default value | Description |
 | :------ | :------ | :------ | :------ |
-| `value` | `any` | `undefined` | - |
+| `value` | `number` | `undefined` | - |
 | `digits` | `number` | `3` | Number decimal digits |
 
 #### Returns
@@ -78,7 +78,7 @@ Rounded value
 
 #### Defined in
 
-[points.ts:63](https://github.com/RodionNikolaev/simple-geometry/blob/fbce11c/src/points.ts#L63)
+[points.ts:63](https://github.com/RodionNikolaev/simple-geometry/blob/4651fb4/src/points.ts#L63)
 
 ___
 
@@ -99,7 +99,7 @@ ___
 
 #### Defined in
 
-[points.ts:70](https://github.com/RodionNikolaev/simple-geometry/blob/fbce11c/src/points.ts#L70)
+[points.ts:68](https://github.com/RodionNikolaev/simple-geometry/blob/4651fb4/src/points.ts#L68)
 
 ___
 
@@ -123,7 +123,7 @@ ___
 
 #### Defined in
 
-[points.ts:74](https://github.com/RodionNikolaev/simple-geometry/blob/fbce11c/src/points.ts#L74)
+[points.ts:72](https://github.com/RodionNikolaev/simple-geometry/blob/4651fb4/src/points.ts#L72)
 
 ___
 
@@ -145,7 +145,7 @@ ___
 
 #### Defined in
 
-[points.ts:109](https://github.com/RodionNikolaev/simple-geometry/blob/fbce11c/src/points.ts#L109)
+[points.ts:107](https://github.com/RodionNikolaev/simple-geometry/blob/4651fb4/src/points.ts#L107)
 
 ___
 
@@ -168,7 +168,7 @@ ___
 
 #### Defined in
 
-[points.ts:113](https://github.com/RodionNikolaev/simple-geometry/blob/fbce11c/src/points.ts#L113)
+[points.ts:111](https://github.com/RodionNikolaev/simple-geometry/blob/4651fb4/src/points.ts#L111)
 
 ___
 
@@ -191,7 +191,7 @@ ___
 
 #### Defined in
 
-[points.ts:121](https://github.com/RodionNikolaev/simple-geometry/blob/fbce11c/src/points.ts#L121)
+[points.ts:119](https://github.com/RodionNikolaev/simple-geometry/blob/4651fb4/src/points.ts#L119)
 
 ___
 
@@ -213,7 +213,7 @@ ___
 
 #### Defined in
 
-[points.ts:125](https://github.com/RodionNikolaev/simple-geometry/blob/fbce11c/src/points.ts#L125)
+[points.ts:123](https://github.com/RodionNikolaev/simple-geometry/blob/4651fb4/src/points.ts#L123)
 
 ___
 
@@ -234,7 +234,7 @@ ___
 
 #### Defined in
 
-[points.ts:132](https://github.com/RodionNikolaev/simple-geometry/blob/fbce11c/src/points.ts#L132)
+[points.ts:130](https://github.com/RodionNikolaev/simple-geometry/blob/4651fb4/src/points.ts#L130)
 
 ___
 
@@ -257,7 +257,7 @@ ___
 
 #### Defined in
 
-[points.ts:171](https://github.com/RodionNikolaev/simple-geometry/blob/fbce11c/src/points.ts#L171)
+[points.ts:169](https://github.com/RodionNikolaev/simple-geometry/blob/4651fb4/src/points.ts#L169)
 
 ___
 
@@ -279,7 +279,7 @@ ___
 
 #### Defined in
 
-[points.ts:186](https://github.com/RodionNikolaev/simple-geometry/blob/fbce11c/src/points.ts#L186)
+[points.ts:184](https://github.com/RodionNikolaev/simple-geometry/blob/4651fb4/src/points.ts#L184)
 
 ___
 
@@ -300,7 +300,7 @@ ___
 
 #### Defined in
 
-[points.ts:197](https://github.com/RodionNikolaev/simple-geometry/blob/fbce11c/src/points.ts#L197)
+[points.ts:195](https://github.com/RodionNikolaev/simple-geometry/blob/4651fb4/src/points.ts#L195)
 
 ___
 
@@ -321,7 +321,7 @@ ___
 
 #### Defined in
 
-[points.ts:210](https://github.com/RodionNikolaev/simple-geometry/blob/fbce11c/src/points.ts#L210)
+[points.ts:208](https://github.com/RodionNikolaev/simple-geometry/blob/4651fb4/src/points.ts#L208)
 
 ___
 
@@ -343,7 +343,7 @@ ___
 
 #### Defined in
 
-[points.ts:214](https://github.com/RodionNikolaev/simple-geometry/blob/fbce11c/src/points.ts#L214)
+[points.ts:212](https://github.com/RodionNikolaev/simple-geometry/blob/4651fb4/src/points.ts#L212)
 
 ___
 
@@ -364,7 +364,7 @@ ___
 
 #### Defined in
 
-[points.ts:222](https://github.com/RodionNikolaev/simple-geometry/blob/fbce11c/src/points.ts#L222)
+[points.ts:220](https://github.com/RodionNikolaev/simple-geometry/blob/4651fb4/src/points.ts#L220)
 
 ___
 
@@ -387,7 +387,7 @@ ___
 
 #### Defined in
 
-[points.ts:226](https://github.com/RodionNikolaev/simple-geometry/blob/fbce11c/src/points.ts#L226)
+[points.ts:224](https://github.com/RodionNikolaev/simple-geometry/blob/4651fb4/src/points.ts#L224)
 
 ___
 
@@ -409,7 +409,7 @@ ___
 
 #### Defined in
 
-[points.ts:230](https://github.com/RodionNikolaev/simple-geometry/blob/fbce11c/src/points.ts#L230)
+[points.ts:228](https://github.com/RodionNikolaev/simple-geometry/blob/4651fb4/src/points.ts#L228)
 
 ___
 
@@ -436,7 +436,7 @@ ___
 
 #### Defined in
 
-[points.ts:234](https://github.com/RodionNikolaev/simple-geometry/blob/fbce11c/src/points.ts#L234)
+[points.ts:232](https://github.com/RodionNikolaev/simple-geometry/blob/4651fb4/src/points.ts#L232)
 
 ___
 
@@ -457,7 +457,7 @@ ___
 
 #### Defined in
 
-[points.ts:251](https://github.com/RodionNikolaev/simple-geometry/blob/fbce11c/src/points.ts#L251)
+[points.ts:249](https://github.com/RodionNikolaev/simple-geometry/blob/4651fb4/src/points.ts#L249)
 
 ___
 
@@ -482,7 +482,7 @@ ___
 
 #### Defined in
 
-[points.ts:255](https://github.com/RodionNikolaev/simple-geometry/blob/fbce11c/src/points.ts#L255)
+[points.ts:253](https://github.com/RodionNikolaev/simple-geometry/blob/4651fb4/src/points.ts#L253)
 
 ___
 
@@ -504,7 +504,7 @@ ___
 
 #### Defined in
 
-[points.ts:265](https://github.com/RodionNikolaev/simple-geometry/blob/fbce11c/src/points.ts#L265)
+[points.ts:263](https://github.com/RodionNikolaev/simple-geometry/blob/4651fb4/src/points.ts#L263)
 
 ___
 
@@ -532,7 +532,7 @@ ___
 
 #### Defined in
 
-[points.ts:279](https://github.com/RodionNikolaev/simple-geometry/blob/fbce11c/src/points.ts#L279)
+[points.ts:277](https://github.com/RodionNikolaev/simple-geometry/blob/4651fb4/src/points.ts#L277)
 
 ___
 
@@ -554,7 +554,7 @@ ___
 
 #### Defined in
 
-[points.ts:329](https://github.com/RodionNikolaev/simple-geometry/blob/fbce11c/src/points.ts#L329)
+[points.ts:327](https://github.com/RodionNikolaev/simple-geometry/blob/4651fb4/src/points.ts#L327)
 
 ___
 
@@ -575,7 +575,7 @@ ___
 
 #### Defined in
 
-[points.ts:337](https://github.com/RodionNikolaev/simple-geometry/blob/fbce11c/src/points.ts#L337)
+[points.ts:335](https://github.com/RodionNikolaev/simple-geometry/blob/4651fb4/src/points.ts#L335)
 
 ___
 
@@ -596,7 +596,7 @@ ___
 
 #### Defined in
 
-[points.ts:355](https://github.com/RodionNikolaev/simple-geometry/blob/fbce11c/src/points.ts#L355)
+[points.ts:353](https://github.com/RodionNikolaev/simple-geometry/blob/4651fb4/src/points.ts#L353)
 
 ___
 
@@ -618,7 +618,7 @@ ___
 
 #### Defined in
 
-[points.ts:359](https://github.com/RodionNikolaev/simple-geometry/blob/fbce11c/src/points.ts#L359)
+[points.ts:357](https://github.com/RodionNikolaev/simple-geometry/blob/4651fb4/src/points.ts#L357)
 
 ___
 
@@ -639,7 +639,7 @@ ___
 
 #### Defined in
 
-[points.ts:363](https://github.com/RodionNikolaev/simple-geometry/blob/fbce11c/src/points.ts#L363)
+[points.ts:361](https://github.com/RodionNikolaev/simple-geometry/blob/4651fb4/src/points.ts#L361)
 
 ___
 
@@ -661,7 +661,7 @@ ___
 
 #### Defined in
 
-[points.ts:374](https://github.com/RodionNikolaev/simple-geometry/blob/fbce11c/src/points.ts#L374)
+[points.ts:372](https://github.com/RodionNikolaev/simple-geometry/blob/4651fb4/src/points.ts#L372)
 
 ___
 
@@ -682,7 +682,7 @@ ___
 
 #### Defined in
 
-[points.ts:400](https://github.com/RodionNikolaev/simple-geometry/blob/fbce11c/src/points.ts#L400)
+[points.ts:398](https://github.com/RodionNikolaev/simple-geometry/blob/4651fb4/src/points.ts#L398)
 
 ___
 
@@ -705,7 +705,7 @@ Detect smaller unrotated rectangle inside the bigger unrotated rectangle
 
 #### Defined in
 
-[points.ts:410](https://github.com/RodionNikolaev/simple-geometry/blob/fbce11c/src/points.ts#L410)
+[points.ts:408](https://github.com/RodionNikolaev/simple-geometry/blob/4651fb4/src/points.ts#L408)
 
 ___
 
@@ -725,7 +725,7 @@ ___
 
 #### Defined in
 
-[points.ts:419](https://github.com/RodionNikolaev/simple-geometry/blob/fbce11c/src/points.ts#L419)
+[points.ts:417](https://github.com/RodionNikolaev/simple-geometry/blob/4651fb4/src/points.ts#L417)
 
 ___
 
@@ -745,7 +745,7 @@ ___
 
 #### Defined in
 
-[points.ts:437](https://github.com/RodionNikolaev/simple-geometry/blob/fbce11c/src/points.ts#L437)
+[points.ts:435](https://github.com/RodionNikolaev/simple-geometry/blob/4651fb4/src/points.ts#L435)
 
 ___
 
@@ -766,7 +766,7 @@ ___
 
 #### Defined in
 
-[points.ts:451](https://github.com/RodionNikolaev/simple-geometry/blob/fbce11c/src/points.ts#L451)
+[points.ts:449](https://github.com/RodionNikolaev/simple-geometry/blob/4651fb4/src/points.ts#L449)
 
 ___
 
@@ -790,7 +790,7 @@ rectange points
 
 #### Defined in
 
-[points.ts:476](https://github.com/RodionNikolaev/simple-geometry/blob/fbce11c/src/points.ts#L476)
+[points.ts:474](https://github.com/RodionNikolaev/simple-geometry/blob/4651fb4/src/points.ts#L474)
 
 ___
 
@@ -810,4 +810,4 @@ ___
 
 #### Defined in
 
-[points.ts:489](https://github.com/RodionNikolaev/simple-geometry/blob/fbce11c/src/points.ts#L489)
+[points.ts:487](https://github.com/RodionNikolaev/simple-geometry/blob/4651fb4/src/points.ts#L487)
