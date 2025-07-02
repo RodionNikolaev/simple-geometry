@@ -1,6 +1,16 @@
 import { expect } from "chai";
 import { describe, it } from "mocha";
-import { Line, Point, Rect, calculateBoundsRect, lineLength, linesIntersection, minDistanceLineEnds, round } from "../src/points";
+import {
+    Line,
+    Point,
+    Rect,
+    calculateBoundsRect,
+    lineLength,
+    linesIntersection,
+    minDistanceLineEnds,
+    round,
+    roundPoint,
+} from "../src/points";
 
 import { getLUT } from "../src/pathPoints";
 
@@ -24,12 +34,13 @@ describe("Rect", () => {
 });
 
 describe("round", () => {
-    let point = new Point(20.554, 77.456);
+    let point = new Point(20.554599, 77.456999);
 
     it("should return 20.55, 77.46", () => {
         expect(round(point.x, 2)).to.equal(20.55);
         expect(round(point.y, 2)).to.equal(77.46);
-        expect(round(point, 2)).to.deep.equal({ x: 20.55, y: 77.46 });
+        expect(roundPoint(point, 2)).to.deep.equal({ x: 20.55, y: 77.46 });
+        expect(roundPoint(point, 4)).to.deep.equal({ x: 20.5546, y: 77.457 });
     });
 });
 

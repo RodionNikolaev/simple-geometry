@@ -1,4 +1,4 @@
-import { Point, lineLength, linesIntersectionXY, perpendicularToLine, round, roundPoint } from "./points";
+import { Point, lineLength, linesIntersectionXY, perpendicularToLine } from "./points";
 
 let { Bezier } = require("bezier-js");
 let svgpath = require("svgpath");
@@ -98,7 +98,7 @@ export function splitPolygon(pathPoints: PathPoint[], p0: Point, p1: Point): Pat
     let _pathPoints: PathPoint[] = pathPoints;
 
     for (let i = 0; i < intersections.length; i++) {
-        _pathPoints = clonePP(splitPath(_pathPoints, roundPoint(intersections[i], 2)));
+        _pathPoints = clonePP(splitPath(_pathPoints, intersections[i]));
     }
 
     return _pathPoints;
@@ -305,7 +305,7 @@ function getPointOnPath(
     return {
         length: min.len,
         pathPoint: min.pathPoint,
-        pointOnPath: roundPoint(min.pointOnPath, 2),
+        pointOnPath: min.pointOnPath,
     };
 }
 
@@ -394,7 +394,7 @@ export function getLUT(points: Point[], steps: number = 100): Point[] {
 
     for (let i = 0; i < steps; i++) {
         let t = i / (steps - 1);
-        let p = round(compute(t, points), 3);
+        let p = compute(t, points);
         lut.push(p);
     }
     return lut;

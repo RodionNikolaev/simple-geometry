@@ -60,15 +60,13 @@ export enum BasePoint {
  * @param digits Number decimal digits
  * @returns Rounded value
  */
-export function round(value: any, digits: number = 3): any {
+export function round(value: number, digits: number = 3): any {
     if (!digits || digits == 0) return value;
-
-    if (value.x != undefined && value.y != undefined) return new Point(round(value.x, digits), round(value.y, digits));
     return Math.round(value * Math.pow(10, digits)) / Math.pow(10, digits);
 }
 
 export function roundPoint(point: Point, digits: number): Point {
-    return !digits || digits == 0 ? point : new Point(Math.round(round(point.x, digits)), Math.round(round(point.y, digits)));
+    return !digits || digits == 0 ? point : new Point(round(point.x, digits), round(point.y, digits));
 }
 
 export function scalePoint(p: Point, dx: number, dy: number, boundingRect: Rect, basePoint: BasePoint): Point {
@@ -79,23 +77,23 @@ export function scalePoint(p: Point, dx: number, dy: number, boundingRect: Rect,
 
     if (basePoint == BasePoint.TopLeft || basePoint == BasePoint.Left || basePoint == BasePoint.Top) {
         point = new Point(
-            round(p.x + ((p.x - boundingRect.x) / boundingRect.width) * dx),
-            round(p.y + ((p.y - boundingRect.y) / boundingRect.height) * dy)
+            p.x + ((p.x - boundingRect.x) / boundingRect.width) * dx,
+            p.y + ((p.y - boundingRect.y) / boundingRect.height) * dy
         );
     } else if (basePoint == BasePoint.TopRight || basePoint == BasePoint.Right) {
         point = new Point(
-            round(p.x - ((boundingRect.x + boundingRect.width - p.x) / boundingRect.width) * -1 * dx),
-            round(p.y + ((p.y - boundingRect.y) / boundingRect.height) * dy)
+            p.x - ((boundingRect.x + boundingRect.width - p.x) / boundingRect.width) * -1 * dx,
+            p.y + ((p.y - boundingRect.y) / boundingRect.height) * dy
         );
     } else if (basePoint == BasePoint.BottomRight) {
         point = new Point(
-            round(p.x - ((boundingRect.x + boundingRect.width - p.x) / boundingRect.width) * -1 * dx),
-            round(p.y - ((boundingRect.y + boundingRect.height - p.y) / boundingRect.height) * -1 * dy)
+            p.x - ((boundingRect.x + boundingRect.width - p.x) / boundingRect.width) * -1 * dx,
+            p.y - ((boundingRect.y + boundingRect.height - p.y) / boundingRect.height) * -1 * dy
         );
     } else if (basePoint == BasePoint.BottomLeft || basePoint == BasePoint.Bottom) {
         point = new Point(
-            round(p.x + ((p.x - boundingRect.x) / boundingRect.width) * dx),
-            round(p.y - ((boundingRect.y + boundingRect.height - p.y) / boundingRect.height) * -1 * dy)
+            p.x + ((p.x - boundingRect.x) / boundingRect.width) * dx,
+            p.y - ((boundingRect.y + boundingRect.height - p.y) / boundingRect.height) * -1 * dy
         );
     }
 
@@ -107,14 +105,14 @@ export function scalePoint(p: Point, dx: number, dy: number, boundingRect: Rect,
 }
 
 export function translatePoint(delta: Point, dx: number, dy: number): Point {
-    return new Point(round(dx + delta.x), round(dy + delta.y));
+    return new Point(dx + delta.x, dy + delta.y);
 }
 
 export function rotatePoint(angle: number, point: Point, cX: number, cY: number): Point {
     let radians = angle / (180 / Math.PI);
     return new Point(
-        round((point.x - cX) * Math.cos(radians) - (point.y - cY) * Math.sin(radians) + cX),
-        round((point.x - cX) * Math.sin(radians) + (point.y - cY) * Math.cos(radians) + cY)
+        (point.x - cX) * Math.cos(radians) - (point.y - cY) * Math.sin(radians) + cX,
+        (point.x - cX) * Math.sin(radians) + (point.y - cY) * Math.cos(radians) + cY
     );
 }
 
@@ -187,11 +185,11 @@ export function getAngle(centerPoint: Point, startPoint: Point, endPoint: Point)
     let a = lineLength(startPoint, centerPoint);
     let b = lineLength(endPoint, centerPoint);
     let c = lineLength(startPoint, endPoint);
-    let cos = round((Math.pow(a, 2) + Math.pow(b, 2) - Math.pow(c, 2)) / (2 * a * b), 3);
+    let cos = (Math.pow(a, 2) + Math.pow(b, 2) - Math.pow(c, 2)) / (2 * a * b);
 
     let direction = getDirection(centerPoint, startPoint, endPoint);
 
-    return direction * round((Math.acos(cos > 1 ? 1 : cos) * 180) / Math.PI, 2);
+    return (direction * (Math.acos(cos > 1 ? 1 : cos) * 180)) / Math.PI;
 }
 
 export function lineAngle(startPoint: Point | { x: number; y: number }, endPoint: Point | { x: number; y: number }): number {
@@ -200,11 +198,11 @@ export function lineAngle(startPoint: Point | { x: number; y: number }, endPoint
     let a = lineLength(p1, startPoint);
     let b = lineLength(endPoint, startPoint);
     let c = lineLength(p1, endPoint);
-    let cos = round((Math.pow(a, 2) + Math.pow(b, 2) - Math.pow(c, 2)) / (2 * a * b), 4);
+    let cos = (Math.pow(a, 2) + Math.pow(b, 2) - Math.pow(c, 2)) / (2 * a * b);
 
     let direction = getDirection(startPoint, p1, endPoint);
 
-    return direction * round((Math.acos(cos > 1 ? 1 : cos) * 180) / Math.PI, 3) || 0;
+    return (direction * (Math.acos(cos > 1 ? 1 : cos) * 180)) / Math.PI || 0;
 }
 
 export function pointsCenter(startPoint: Point, endPoint: Point) {
@@ -220,11 +218,11 @@ export function getDirection(centerPoint: Point, startPoint: Point, endPoint: Po
 }
 
 export function lineLength(p1: Point, p2: Point): number {
-    return round(Math.sqrt(Math.pow(p1.x - p2.x, 2) + Math.pow(p1.y - p2.y, 2)), 4);
+    return Math.sqrt(Math.pow(p1.x - p2.x, 2) + Math.pow(p1.y - p2.y, 2));
 }
 
 export function lineLengthXY(x1: number, y1: number, x2: number, y2: number): number {
-    return round(Math.sqrt(Math.pow(x1 - x2, 2) + Math.pow(y1 - y2, 2)), 4);
+    return Math.sqrt(Math.pow(x1 - x2, 2) + Math.pow(y1 - y2, 2));
 }
 
 export function pointIsOnLine(p: Point, p1: Point, p2: Point): boolean {
@@ -331,7 +329,7 @@ export function perpendicularPoint(start: Point, end: Point, pLength: number): P
     let c = pointsCenter(start, end);
     const x = pLength * Math.cos((angle * Math.PI) / 180.0);
     const y = pLength * Math.sin((angle * Math.PI) / 180.0);
-    return new Point(c.x + round(x, 1), c.y + round(y, 1));
+    return new Point(c.x + x, c.y + y);
 }
 
 export function lineRectangleIntersections(line: Line, rect: Rect): Point[] {

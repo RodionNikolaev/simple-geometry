@@ -1,6 +1,6 @@
 {
     "name": "simple-geometry",
-    "version": "1.0.21",
+    "version": "1.0.22",
     "description": "Simple geometry",
     "main": "dist/points.js",
     "exports": {
