@@ -39,7 +39,7 @@
 
 #### Defined in
 
-[pathPoints.ts:11](https://github.com/RodionNikolaev/simple-geometry/blob/4651fb4/src/pathPoints.ts#L11)
+[pathPoints.ts:11](https://github.com/RodionNikolaev/simple-geometry/blob/670e0f4/src/pathPoints.ts#L11)
 
 ___
 
@@ -60,7 +60,7 @@ ___
 
 #### Defined in
 
-[pathPoints.ts:45](https://github.com/RodionNikolaev/simple-geometry/blob/4651fb4/src/pathPoints.ts#L45)
+[pathPoints.ts:45](https://github.com/RodionNikolaev/simple-geometry/blob/670e0f4/src/pathPoints.ts#L45)
 
 ___
 
@@ -82,7 +82,7 @@ ___
 
 #### Defined in
 
-[pathPoints.ts:68](https://github.com/RodionNikolaev/simple-geometry/blob/4651fb4/src/pathPoints.ts#L68)
+[pathPoints.ts:68](https://github.com/RodionNikolaev/simple-geometry/blob/670e0f4/src/pathPoints.ts#L68)
 
 ___
 
@@ -104,7 +104,7 @@ ___
 
 #### Defined in
 
-[pathPoints.ts:81](https://github.com/RodionNikolaev/simple-geometry/blob/4651fb4/src/pathPoints.ts#L81)
+[pathPoints.ts:81](https://github.com/RodionNikolaev/simple-geometry/blob/670e0f4/src/pathPoints.ts#L81)
 
 ___
 
@@ -124,7 +124,7 @@ ___
 
 #### Defined in
 
-[pathPoints.ts:107](https://github.com/RodionNikolaev/simple-geometry/blob/4651fb4/src/pathPoints.ts#L107)
+[pathPoints.ts:107](https://github.com/RodionNikolaev/simple-geometry/blob/670e0f4/src/pathPoints.ts#L107)
 
 ___
 
@@ -145,7 +145,7 @@ ___
 
 #### Defined in
 
-[pathPoints.ts:136](https://github.com/RodionNikolaev/simple-geometry/blob/4651fb4/src/pathPoints.ts#L136)
+[pathPoints.ts:136](https://github.com/RodionNikolaev/simple-geometry/blob/670e0f4/src/pathPoints.ts#L136)
 
 ___
 
@@ -165,7 +165,7 @@ ___
 
 #### Defined in
 
-[pathPoints.ts:197](https://github.com/RodionNikolaev/simple-geometry/blob/4651fb4/src/pathPoints.ts#L197)
+[pathPoints.ts:197](https://github.com/RodionNikolaev/simple-geometry/blob/670e0f4/src/pathPoints.ts#L197)
 
 ___
 
@@ -188,4 +188,4 @@ Generates a LookUp Table of coordinates on the curve
 
 #### Defined in
 
-[pathPoints.ts:390](https://github.com/RodionNikolaev/simple-geometry/blob/4651fb4/src/pathPoints.ts#L390)
+[pathPoints.ts:390](https://github.com/RodionNikolaev/simple-geometry/blob/670e0f4/src/pathPoints.ts#L390)
